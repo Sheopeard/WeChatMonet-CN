@@ -2,6 +2,12 @@
 
 所有显著变更记录于此。格式参考 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.1.0/)。
 
+## [26S4-CN14] - 2026-11-03
+
+- 修复静态 RRO APK 的资源表打包：`resources.arsc` 保持未压缩并按 4 字节对齐，避免 Sony Android 17 的 PackageManager 拒绝注册覆盖包。
+- 在适配和模块打包阶段加入资源表布局校验；CN 3200 五个已选覆盖已在 Sony Android 17 重启后确认生效。
+- 保留 CN 8.0.79（versionCode 3200）的独立资源映射，更新管理器自动更新清单。
+
 ## [26S4-CN13] - 2026-10-18
 
 ### 渠道更正与 CN 版适配
@@ -12,6 +18,7 @@
 - action / service 在受支持版本间切换时同步所有已选择的覆盖包，提示重启扫描静态 RRO。
 - 小米 CN 3200 重启后，五个已选覆盖包均为 STATE_ENABLED，实际挂载 SHA256 与新包一致，系统生成 idmap 的目标集合逐包完全一致；用户自行查看后确认界面正常。模糊底栏验证签名与 idmap，未切换界面启用；未另做逐页及明暗模式截图验证。
 - 撤回误标渠道的 CN12 Release；发布 CN13 并更新管理器更新清单。
+- 修正版本化 RRO 的 APK 打包：`resources.arsc` 改为未压缩并强制 4 字节对齐；Sony Android 17 会拒绝扫描压缩资源表，导致文件已挂载但 PackageManager 不登记。
 
 ## [26S4-CN12] - 2026-10-14（目标为 Play 3182，原渠道标注有误）
 

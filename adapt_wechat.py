@@ -13,8 +13,10 @@ import argparse
 import hashlib
 import json
 import shutil
+import struct
 import subprocess
 import sys
+import zipfile
 from pathlib import Path
 
 if hasattr(sys.stdout, "reconfigure"):
@@ -62,6 +64,26 @@ def resource_names(apk_path: Path) -> set[str]:
 def sha256(filename: Path) -> str:
     with filename.open('rb') as stream:
         return hashlib.file_digest(stream, 'sha256').hexdigest()
+
+
+def validate_android_apk_layout(filename: Path) -> None:
+    """Validate the APK layout required by Android 11+ package scanning."""
+    with zipfile.ZipFile(filename) as archive:
+        info = archive.getinfo("resources.arsc")
+        if info.compress_type != zipfile.ZIP_STORED:
+            raise SystemExit(
+                f"{filename.name} 的 resources.arsc 仍为压缩格式，Android 不会扫描该 RRO"
+            )
+        # The alignment padding lives in the local file header.  ZipInfo.extra
+        # is the central-directory extra field and may not contain that pad.
+        with filename.open("rb") as stream:
+            stream.seek(info.header_offset + 26)
+            name_len, extra_len = struct.unpack("<HH", stream.read(4))
+        data_offset = info.header_offset + 30 + name_len + extra_len
+        if data_offset % 4:
+            raise SystemExit(
+                f"{filename.name} 的 resources.arsc 未按 4 字节对齐（offset={data_offset}）"
+            )
 
 
 def private_name(name: str) -> str:
@@ -191,6 +213,9 @@ def main() -> int:
         print(f"signed {len(built)} APKs")
     else:
         print(f"warning: signer not found, APKs are not signed: {signer}", file=sys.stderr)
+
+    for apk in built:
+        validate_android_apk_layout(apk)
 
     if args.apply:
         files_dir = module_dir / "files"

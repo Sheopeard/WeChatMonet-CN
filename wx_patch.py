@@ -246,7 +246,11 @@ def patch_apk(src, dst, renames_by_pkg, allow_existing_strings=False, typed=Fals
         if fn.upper().startswith("META-INF/") and fn.upper().endswith((".RSA", ".DSA", ".EC", ".SF", ".MF")):
             continue  # strip stale signatures
         if fn == "resources.arsc":
-            zout.writestr(fn, new_arsc, compress_type=zipfile.ZIP_DEFLATED)
+            # Android 11+ rejects installed APKs whose resource table is
+            # deflated (INSTALL_FAILED_INVALID_APK).  Keep the table stored;
+            # the subsequent zipalign/sign step can then align its data
+            # offset while preserving the required uncompressed format.
+            zout.writestr(fn, new_arsc, compress_type=zipfile.ZIP_STORED)
         else:
             zout.writestr(info, zin.read(fn), compress_type=zipfile.ZIP_DEFLATED)
     zout.close()

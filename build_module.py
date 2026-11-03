@@ -1,10 +1,27 @@
 """Package module delivery files using an explicit allowlist."""
 import hashlib
 import json
+import struct
 import zipfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
+
+
+def validate_apk_layout(path: Path) -> None:
+    """Fail packaging before Android can reject a static RRO at boot."""
+    with zipfile.ZipFile(path) as archive:
+        info = archive.getinfo('resources.arsc')
+        if info.compress_type != zipfile.ZIP_STORED:
+            raise ValueError(f'{path.name}: resources.arsc must be uncompressed')
+        with path.open('rb') as stream:
+            stream.seek(info.header_offset + 26)
+            name_len, extra_len = struct.unpack('<HH', stream.read(4))
+        data_offset = info.header_offset + 30 + name_len + extra_len
+        if data_offset % 4:
+            raise ValueError(f'{path.name}: resources.arsc is not 4-byte aligned')
+
+
 prop = dict(line.split('=', 1) for line in (ROOT / 'module.prop').read_text(encoding='utf-8').splitlines() if '=' in line)
 for spec_path in sorted((ROOT / 'compat').glob('[0-9]*.json')):
     spec = json.loads(spec_path.read_text(encoding='utf-8'))
@@ -21,6 +38,9 @@ paths = [ROOT / name for name in (
     'adapt_wechat.py', 'wx_patch.py', 'build_module.py',
 )]
 paths += sorted((ROOT / 'files').glob('*.apk'))
+for apk in paths:
+    if apk.suffix == '.apk':
+        validate_apk_layout(apk)
 paths.append(ROOT / 'files' / 'aapt2')
 paths += sorted((ROOT / 'compat').glob('*.json'))
 paths += sorted((ROOT / 'compat').glob('*.md'))

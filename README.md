@@ -2,7 +2,7 @@
 
 基于上游 WeChat Monet Pro 26S4（作者：枯れ木, 1e93d, HSSkyBoy，MT 论坛发布）的微信大陆版 KernelSU/Magisk 模块适配。通过 Android Runtime Resource Overlay（RRO）为微信提供 Material You / Monet 动态取色，**不修改微信 DEX，无 Xposed 依赖**。
 
-- 当前版本：**26S4-CN13**（versionCode 261018）
+- 当前版本：**26S4-CN14**（versionCode 261103）
 - CN 版：8.0.76 / 8.0.77 / 8.0.79（versionCode `3140` / `3141` / `3160` / `3200`）。3200 已在小米重启后核对挂载与 idmap，用户确认界面正常；验证范围见 `compat/3200-validation.md`。
 - Play 版：8.0.79（`3182`）。**此前 CN11 / CN12 发布的 3182 适配和小米真机验证实际针对 Play 包，原渠道标注有误；不能用于证明 CN 3200 已适配。**
 - 系统要求：Android 14+，KernelSU 或 Magisk
