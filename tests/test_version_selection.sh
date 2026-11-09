@@ -11,7 +11,20 @@ is_mainland_wechat_version 3200
 uses_image_bubble_overlay 3182
 uses_image_bubble_overlay 3200
 ! uses_image_bubble_overlay 3084
-! is_supported_wechat_version 9999
+is_supported_wechat_version 3220
+is_supported_wechat_version 9999
+! is_audited_wechat_version 3220
+! is_supported_wechat_version ''
+! is_supported_wechat_version 0
+! is_supported_wechat_version invalid
+! is_supported_wechat_version 8.0.80
+! is_supported_wechat_version -1
+[ "$(wechat_overlay_version 3220)" = 3200 ]
+[ "$(wechat_overlay_version 9999)" = 3200 ]
+[ "$(wechat_overlay_version 3182)" = 3182 ]
+uses_image_bubble_overlay 3220
+uses_image_bubble_overlay 9999
+! uses_image_bubble_overlay ''
 
 mkdir -p "$fixture/files" "$fixture/system/priv-app/MonetWeChat" "$fixture/system/priv-app/MonetWeChatBadge"
 printf legacy > "$fixture/files/MonetWeChat.apk"
@@ -20,6 +33,9 @@ printf old-badge > "$fixture/system/priv-app/MonetWeChatBadge/MonetWeChatBadge.a
 WECHAT_VERSION_CODE=3200
 ! overlay_source_apk "$fixture" MonetWeChat
 WECHAT_VERSION_CODE=3182
+! overlay_source_apk "$fixture" MonetWeChat
+WECHAT_VERSION_CODE=3220
+# Unknown builds must use the explicit CN 3200 payload, never legacy files.
 ! overlay_source_apk "$fixture" MonetWeChat
 WECHAT_VERSION_CODE=3160
 [ "$(overlay_source_apk "$fixture" MonetWeChat)" = "$fixture/files/MonetWeChat.apk" ]
@@ -33,4 +49,15 @@ printf cn-badge > "$fixture/files/MonetWeChatBadge-3200.apk"
 refresh_versioned_overlays "$fixture"
 cmp "$fixture/files/MonetWeChat-3200.apk" "$fixture/system/priv-app/MonetWeChat/MonetWeChat.apk"
 cmp "$fixture/files/MonetWeChatBadge-3200.apk" "$fixture/system/priv-app/MonetWeChatBadge/MonetWeChatBadge.apk"
-echo 'Channel selection, fallback refusal and complete selected-package refresh passed.'
+WECHAT_VERSION_CODE=3220
+[ "$(overlay_source_apk "$fixture" MonetWeChat)" = "$fixture/files/MonetWeChat-3200.apk" ]
+printf old-base > "$fixture/system/priv-app/MonetWeChat/MonetWeChat.apk"
+refresh_versioned_overlays "$fixture"
+cmp "$fixture/files/MonetWeChat-3200.apk" "$fixture/system/priv-app/MonetWeChat/MonetWeChat.apk"
+cmp "$fixture/files/MonetWeChatBadge-3200.apk" "$fixture/system/priv-app/MonetWeChatBadge/MonetWeChatBadge.apk"
+WECHAT_VERSION_CODE=9999
+[ "$(overlay_source_apk "$fixture" MonetWeChat)" = "$fixture/files/MonetWeChat-3200.apk" ]
+WECHAT_VERSION_CODE=3084
+[ "$(overlay_source_apk "$fixture" MonetWeChat)" = "$fixture/files/MonetWeChat.apk" ]
+
+echo 'Audited channels, unrestricted versions, fallback selection and complete refresh passed.'

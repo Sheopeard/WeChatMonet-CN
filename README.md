@@ -1,4 +1,14 @@
-# WeChat Monet CN · 微信莫奈取色（大陆版适配）
+# WeChat Monet CN · 微信莫奈取色（解除版本限制分支）
+
+本分支基于 [SherlockChiang/WeChatMonet-CN](https://github.com/SherlockChiang/WeChatMonet-CN) 的 CN14，先解除微信版本拦截。当前版本为 **26S4-CN14-U1**。
+
+- 安装器、模块操作菜单、开机服务及开机状态恢复均允许未知的微信版本，不再因版本白名单拒绝运行。
+- 已核对版本继续使用原来的资源包；微信 8.0.80 等未知版本统一试用 **CN 8.0.79 / 3200** 的六套版本化资源，采用图片气泡路径，不会误选早期 Play 气泡形状包。
+- **这不是微信 8.0.80 的完整适配。** 尚未审核其资源名、资源用途和界面表现；解除拦截后可能出现无效果、颜色错位或界面异常。异常时在 KernelSU / Magisk 中停用模块后重启。
+- Android 14+ 要求和必须检测到已安装微信的检查保留。安装包中的 RRO APK 与上游 CN14 完全相同，没有修改微信 APK。
+- 下载本分支的 [Release](https://github.com/Sheopeard/WeChatMonet-CN/releases/tag/v26S4-CN14-U1)，在管理器中刷入 ZIP，按提示选择后重启。自动更新地址改为本 fork，避免被上游包覆盖回版本限制。
+
+以下为上游 CN14 的功能和历史验证记录，不能视为对 8.0.80 的验证。
 
 基于上游 WeChat Monet Pro 26S4（作者：枯れ木, 1e93d, HSSkyBoy，MT 论坛发布）的微信大陆版 KernelSU/Magisk 模块适配。通过 Android Runtime Resource Overlay（RRO）为微信提供 Material You / Monet 动态取色，**不修改微信 DEX，无 Xposed 依赖**。
 
@@ -102,7 +112,7 @@ python .\build_module.py
 - 文字类槽位不取色（避免文字染色），整体是「背景彩、文字不彩」的半 Monet 观感。
 - 微信 8.0.77 默认启用预编译 SVG（`SVGBuildConfig.WxSVGCode=true`）。这类红点由 `com.tencent.mm.boot.svg.code.drawable.*` 直接绘制并含硬编码颜色，RRO 无法覆盖；本模块通过 `color/ac` 与 `Red_100` 稳定覆盖资源型红点及少量共用红色控件。使用其他颜色槽位的底栏选中项不会因此变色。全量动态红点需要修改微信 DEX 或使用运行时 Hook，本模块不做这两类改动。
 - Play 3182 基础包有 49 个内部或尚未核对的条目，CN 3200 有 50 个，均不参与目标匹配；其中含 6 个关于页字符串。圆角包的 2 个内部颜色仍供包内 XML 引用。
-- 本模块仅针对上述 versionCode 验证；微信更新到未适配版本后需要重新审核完整映射并做真机验证。静态 RRO 的启停由系统开机扫描决定，回滚应停用模块后重启。
+- 仅上述 versionCode 有上游验证记录；本分支允许其他版本试用 CN 3200 资源，但完整适配仍需审核映射并做真机验证。静态 RRO 的启停由系统开机扫描决定，回滚应停用模块后重启。
 
 ## 致谢与声明
 

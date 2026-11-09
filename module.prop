@@ -1,7 +1,7 @@
 id=WeChat_Monet_Pro
-name=WeChat Monet Pro CN
-version=26S4-CN14
-versionCode=261103
+name=WeChat Monet Pro CN (Unrestricted)
+version=26S4-CN14-U1
+versionCode=261109
 author=枯れ木, 1e93d, HSSkyBoy
-description=微信莫奈取色 · CN 8.0.76/8.0.77/8.0.79（3140/3141/3160/3200）、Play 8.0.79（3182）：基础 Monet 动态取色、多场景圆角、普通文本会话气泡、纯色/模糊底栏、资源型红点与共用强调色（部分）。CN 3200 已通过小米真机验证。
-updateJson=https://raw.githubusercontent.com/SherlockChiang/WeChatMonet-CN/main/update.json
+description=微信莫奈取色 · 解除微信版本拦截。已核对版本沿用专用资源；8.0.80 等未知版本试用 CN 3200 资源，尚未完成资源适配及真机验证。
+updateJson=https://raw.githubusercontent.com/Sheopeard/WeChatMonet-CN/main/update.json
