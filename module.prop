@@ -1,7 +1,7 @@
 id=WeChat_Monet_Pro
-name=WeChat Monet Pro CN (Unrestricted)
-version=26S4-CN14-U1
-versionCode=261109
+name=WeChat Monet Pro CN
+version=26S4-CN14-A1
+versionCode=261111
 author=枯れ木, 1e93d, HSSkyBoy
-description=微信莫奈取色 · 解除微信版本拦截。已核对版本沿用专用资源；8.0.80 等未知版本试用 CN 3200 资源，尚未完成资源适配及真机验证。
+description=微信莫奈国内版：仅允许已核对资源的精确版本。新版通过云端映射、独立验证及 NAS 签名后发布测试版；上游已适配最新版国内微信时优先使用上游版。
 updateJson=https://raw.githubusercontent.com/Sheopeard/WeChatMonet-CN/main/update.json

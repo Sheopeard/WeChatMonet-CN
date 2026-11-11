@@ -73,15 +73,13 @@ version_code=$(dumpsys package "$TARGET_PACKAGE" 2>/dev/null | sed -n 's/.*versi
 WECHAT_VERSION_CODE="$version_code"
 export WECHAT_VERSION_CODE
 if ! is_supported_wechat_version "$version_code"; then
-  echo '! 未检测到已安装的微信，或无法读取微信版本号；停用旧覆盖配置。'
+  echo "! 当前微信版本不受支持（versionCode=${version_code:-未知}），停用旧覆盖配置。"
   for user_id in $(list_target_users); do
     disable_overlay_state "$user_id"
     am force-stop --user "$user_id" "$TARGET_PACKAGE" 2>/dev/null
   done
   exit 0
 fi
-
-warn_unaudited_wechat_version "$version_code"
 
 for user_id in $(list_target_users); do
   restore_overlay_state "$user_id" "$version_code"

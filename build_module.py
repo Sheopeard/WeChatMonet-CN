@@ -37,6 +37,8 @@ paths = [ROOT / name for name in (
     'action.sh', 'boot-completed.sh', 'common.sh', 'customize.sh', 'service.sh',
     'adapt_wechat.py', 'wx_patch.py', 'build_module.py',
 )]
+if (ROOT / 'target-version.conf').is_file():
+    paths.append(ROOT / 'target-version.conf')
 paths += sorted((ROOT / 'files').glob('*.apk'))
 for apk in paths:
     if apk.suffix == '.apk':

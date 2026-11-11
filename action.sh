@@ -17,10 +17,9 @@ main() {
   WECHAT_VERSION_CODE="$version_code"
   export WECHAT_VERSION_CODE
   if ! is_supported_wechat_version "$version_code"; then
-    echo '! 未检测到已安装的微信，或无法读取微信版本号；未修改覆盖配置。'
+    echo "! 当前微信版本不受支持（versionCode=${version_code:-未知}），未修改覆盖配置。"
     return 1
   fi
-  warn_unaudited_wechat_version "$version_code"
 
   refresh_versioned_overlays "$MODDIR" || return 1
 

@@ -14,10 +14,9 @@ version_code=$(dumpsys package com.tencent.mm 2>/dev/null | sed -n 's/.*versionC
 WECHAT_VERSION_CODE="$version_code"
 export WECHAT_VERSION_CODE
 if ! is_supported_wechat_version "$version_code"; then
-  echo '! 未检测到已安装的微信，或无法读取微信版本号；跳过覆盖启用。'
+  echo "! 当前微信版本不受支持（versionCode=${version_code:-未知}），跳过覆盖启用。"
   exit 0
 fi
-warn_unaudited_wechat_version "$version_code"
 
 refresh_versioned_overlays "$MODDIR" || {
   echo '! 当前微信版本资源不完整，停止刷新覆盖。'

@@ -8,7 +8,11 @@ CHAT_BUBBLE_OVERLAY_NAME="MonetWeChatChatBubble"
 CHAT_BUBBLE_OVERLAY_PACKAGE="monet.chatbubble.${TARGET_PACKAGE}"
 SECONDARY_OVERLAY_SPECS="MonetWeChat:monet.com.tencent.mm ${CHAT_BUBBLE_OVERLAY_NAME}:${CHAT_BUBBLE_OVERLAY_PACKAGE} MonetWeChatMultiSceneCorners:monet.multiscenecorners.com.tencent.mm MonetWeChatSolidTab:monet.solidtab.com.tencent.mm MonetWeChatClassicBubble:monet.classicbubble.com.tencent.mm MonetWeChatBubblePro:monet.bubblepro.com.tencent.mm MonetWeChatBlurTab:monet.blurtab.com.tencent.mm ${BADGE_OVERLAY_NAME}:${BADGE_OVERLAY_PACKAGE}"
 
-# Audited channel labels describe resource mappings, not installation limits.
+# The controller writes data only, never shell code. New versions require six
+# independently verified versioned APKs before target-version.conf is emitted.
+AUTOMATION_WECHAT_VERSION_CODE=$(sed -n 's/^wechat_version_code="\([0-9][0-9]*\)"$/\1/p' "${MODPATH:-${MODDIR:-${0%/*}}}/target-version.conf" 2>/dev/null) || AUTOMATION_WECHAT_VERSION_CODE=""
+
+# Keep version gates in one place so the installer and action menu cannot drift.
 is_play_wechat_version() {
   case "$1" in
     3084|3085|3182) return 0 ;;
@@ -19,45 +23,18 @@ is_play_wechat_version() {
 is_mainland_wechat_version() {
   case "$1" in
     3140|3141|3160|3200) return 0 ;;
-    *) return 1 ;;
+    *) [ -n "$AUTOMATION_WECHAT_VERSION_CODE" ] && [ "$1" = "$AUTOMATION_WECHAT_VERSION_CODE" ] ;;
   esac
 }
 
-is_audited_wechat_version() {
-  is_play_wechat_version "$1" || is_mainland_wechat_version "$1"
-}
-
-# Accept every installed version; only a missing/invalid package is an error.
 is_supported_wechat_version() {
-  case "$1" in
-    ''|*[!0-9]*) return 1 ;;
-    *) [ "$1" -gt 0 ] 2>/dev/null ;;
-  esac
-}
-
-wechat_overlay_version() {
-  is_supported_wechat_version "$1" || return 1
-  if is_audited_wechat_version "$1"; then
-    echo "$1"
-  else
-    # Experimental fallback, not a claim about the unknown build's channel.
-    echo 3200
-  fi
-}
-
-warn_unaudited_wechat_version() {
-  if ! is_audited_wechat_version "$1"; then
-    echo "! 微信 ${1} 尚未核对资源映射，已解除版本拦截，试用 CN 3200 资源。"
-    echo '! 允许安装不代表已完整适配；如颜色或界面异常，请在管理器停用模块后重启。'
-  fi
+  is_play_wechat_version "$1" || is_mainland_wechat_version "$1"
 }
 
 # GP 8.0.79 also uses the separately audited image-backed bubble payload.
 # Channel identification must not select the legacy GP 8.0.72 shape overlays.
 uses_image_bubble_overlay() {
-  local version
-  version=$(wechat_overlay_version "$1") || return 1
-  is_mainland_wechat_version "$version" || [ "$version" = "3182" ]
+  is_mainland_wechat_version "$1" || [ "$1" = "3182" ]
 }
 
 listen_volume_key() {
@@ -172,10 +149,9 @@ install_overlay_apk() {
 overlay_source_apk() {
   local moddir="$1" name="$2" version="${WECHAT_VERSION_CODE:-}" candidate
   if [ -n "$version" ]; then
-    version=$(wechat_overlay_version "$version") || return 1
     candidate="$moddir/files/${name}-${version}.apk"
     [ -f "$candidate" ] && { echo "$candidate"; return 0; }
-    if [ "$version" = "3182" ] || [ "$version" = "3200" ]; then
+    if [ "$version" = "3182" ] || [ "$version" = "3200" ] || [ "$version" = "$AUTOMATION_WECHAT_VERSION_CODE" ]; then
       case "$name" in
         MonetWeChat|MonetWeChatBadge|MonetWeChatChatBubble|MonetWeChatMultiSceneCorners|MonetWeChatSolidTab|MonetWeChatBlurTab)
           echo "! 缺少 ${name}-${version}.apk，不能使用旧版混淆资源。" >&2
@@ -223,7 +199,7 @@ refresh_versioned_overlays() {
     install_static_overlay "$moddir" "$name" || return 1
   done
   if [ "$changed" = "1" ]; then
-    echo "! 已刷新微信覆盖资源（资源版本 $(wechat_overlay_version "$WECHAT_VERSION_CODE")）；静态 RRO 需重启后重新扫描。"
+    echo "! 已切换到微信 ${WECHAT_VERSION_CODE} 专用资源；静态 RRO 需重启后重新扫描。"
   fi
 }
 
