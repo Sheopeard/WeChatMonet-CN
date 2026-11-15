@@ -8,15 +8,21 @@ is_play_wechat_version 3182
 ! is_mainland_wechat_version 3182
 is_mainland_wechat_version 3200
 ! is_play_wechat_version 3200
+is_mainland_wechat_version 3220
+! is_play_wechat_version 3220
 uses_image_bubble_overlay 3182
 uses_image_bubble_overlay 3200
+uses_image_bubble_overlay 3220
 ! uses_image_bubble_overlay 3084
+! is_supported_wechat_version 3221
 ! is_supported_wechat_version 9999
 
 mkdir -p "$fixture/files" "$fixture/system/priv-app/MonetWeChat" "$fixture/system/priv-app/MonetWeChatBadge"
 printf legacy > "$fixture/files/MonetWeChat.apk"
 printf old-base > "$fixture/system/priv-app/MonetWeChat/MonetWeChat.apk"
 printf old-badge > "$fixture/system/priv-app/MonetWeChatBadge/MonetWeChatBadge.apk"
+WECHAT_VERSION_CODE=3220
+! overlay_source_apk "$fixture" MonetWeChat
 WECHAT_VERSION_CODE=3200
 ! overlay_source_apk "$fixture" MonetWeChat
 WECHAT_VERSION_CODE=3182
@@ -33,14 +39,23 @@ printf cn-badge > "$fixture/files/MonetWeChatBadge-3200.apk"
 refresh_versioned_overlays "$fixture"
 cmp "$fixture/files/MonetWeChat-3200.apk" "$fixture/system/priv-app/MonetWeChat/MonetWeChat.apk"
 cmp "$fixture/files/MonetWeChatBadge-3200.apk" "$fixture/system/priv-app/MonetWeChatBadge/MonetWeChatBadge.apk"
+
+WECHAT_VERSION_CODE=3220
+printf cn3220-base > "$fixture/files/MonetWeChat-3220.apk"
+! refresh_versioned_overlays "$fixture"
+cmp "$fixture/files/MonetWeChat-3200.apk" "$fixture/system/priv-app/MonetWeChat/MonetWeChat.apk"
+printf cn3220-badge > "$fixture/files/MonetWeChatBadge-3220.apk"
+refresh_versioned_overlays "$fixture"
+cmp "$fixture/files/MonetWeChat-3220.apk" "$fixture/system/priv-app/MonetWeChat/MonetWeChat.apk"
+cmp "$fixture/files/MonetWeChatBadge-3220.apk" "$fixture/system/priv-app/MonetWeChatBadge/MonetWeChatBadge.apk"
 echo 'Channel selection, fallback refusal and complete selected-package refresh passed.'
 
 # Only the controller-declared exact additional version may select new RROs.
-AUTOMATION_WECHAT_VERSION_CODE=3220
-is_supported_wechat_version 3220
-uses_image_bubble_overlay 3220
-! is_supported_wechat_version 3221
-WECHAT_VERSION_CODE=3220
+AUTOMATION_WECHAT_VERSION_CODE=3240
+is_supported_wechat_version 3240
+uses_image_bubble_overlay 3240
+! is_supported_wechat_version 3241
+WECHAT_VERSION_CODE=3240
 ! overlay_source_apk "$fixture" MonetWeChat
-printf new-base > "$fixture/files/MonetWeChat-3220.apk"
-[ "$(overlay_source_apk "$fixture" MonetWeChat)" = "$fixture/files/MonetWeChat-3220.apk" ]
+printf new-base > "$fixture/files/MonetWeChat-3240.apk"
+[ "$(overlay_source_apk "$fixture" MonetWeChat)" = "$fixture/files/MonetWeChat-3240.apk" ]

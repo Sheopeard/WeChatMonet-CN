@@ -1,0 +1,5692 @@
+{
+  "baselineVersionCode": 3200,
+  "baselineSha256": "f2a725bc04302ad218a563533ae79356e66b64aa711b275bc919a8d432f7e15d",
+  "targetVersionCode": 3220,
+  "targetName": "8.0.80",
+  "channel": "CN",
+  "targetBuildTag": "Android_Wechat_RELEASE_WUKONG #8724",
+  "targetSha256": "9d9b6c516e8e07e437c81485fde21fe13ce4f61b37d19e793fff40c71be39c0e",
+  "method": "Full config/value + resolved XML tree + XML/style slot matching + contiguous RID block span + DEX bytecode callsite verification against CN 3200.",
+  "removedFromTarget": [
+    {
+      "source": "drawable/cbr",
+      "baseline3200": "drawable/cbr",
+      "baselineRid": "0x7f0811ec",
+      "baselineFiles": [
+        [
+          "xxhdpi",
+          "file",
+          "r/aj/cbr.webp"
+        ]
+      ],
+      "baselineXmlRefs": [
+        [
+          "r/p/c4w.xml",
+          [
+            "layout/c4w"
+          ],
+          "RelativeLayout",
+          null,
+          "background"
+        ],
+        [
+          "r/p/c54.xml",
+          [
+            "layout/c54"
+          ],
+          "RelativeLayout",
+          null,
+          "background"
+        ]
+      ],
+      "disposition": "moved_to_privateResources",
+      "evidence": "In CN 3200, drawable/cbr (r/aj/cbr.webp, 300x580) was referenced only as RelativeLayout background by layout/c4w and layout/c54 (Music MV editing layouts containing MvTracksEditView). In CN 3220, MvTracksEditView, layout/c4w, layout/c54, drawable/as0..as5, and drawable/cbr were removed (plugin/mv/ DEX references dropped from 895 to 69). Inside MonetWeChat.apk, drawable/cbr has zero internal references."
+    }
+  ],
+  "overlays": {
+    "MonetWeChat": [
+      {
+        "source": "color/BW_0_Alpha_0_9_Night_Mode",
+        "baseline3200": "color/BW_0_Alpha_0_9_Night_Mode",
+        "target": "color/BW_0_Alpha_0_9_Night_Mode",
+        "baselineRid": "0x7f06002d",
+        "targetRid": "0x7f06002d",
+        "candidateCount": 26,
+        "reasons": [
+          "xml-slots-unique:13"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {
+          "color/BW_0_Alpha_0_9_Night_Mode": 13
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 13,
+        "xmlRefs3220Count": 13,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/BW_0_Alpha_0_9_White_Mode",
+        "baseline3200": "color/BW_0_Alpha_0_9_White_Mode",
+        "target": "color/BW_0_Alpha_0_9_White_Mode",
+        "baselineRid": "0x7f06002e",
+        "targetRid": "0x7f06002e",
+        "candidateCount": 26,
+        "reasons": [
+          "descriptive-name",
+          "block:5"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/BW_0_Alpha_0_9_night_mode",
+        "baseline3200": "color/BW_0_Alpha_0_9_night_mode",
+        "target": "color/BW_0_Alpha_0_9_night_mode",
+        "baselineRid": "0x7f06002f",
+        "targetRid": "0x7f06002f",
+        "candidateCount": 26,
+        "reasons": [
+          "xml-slots-unique:3"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {
+          "color/BW_0_Alpha_0_9_night_mode": 3
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 5,
+        "xmlRefs3220Count": 5,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/BW_100",
+        "baseline3200": "color/BW_100",
+        "target": "color/BW_100",
+        "baselineRid": "0x7f060031",
+        "targetRid": "0x7f060031",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "xml-slots:41",
+          "block:5"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {
+          "color/BW_100": 41
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 58,
+        "xmlRefs3220Count": 58,
+        "arscRefs3200Count": 5,
+        "arscRefs3220Count": 5,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/BW_30_Alpha_0_9",
+        "baseline3200": "color/BW_30_Alpha_0_9",
+        "target": "color/BW_30_Alpha_0_9",
+        "baselineRid": "0x7f06004b",
+        "targetRid": "0x7f06004b",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "xml-slots:3",
+          "block:5"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {
+          "color/BW_30_Alpha_0_9": 3
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 3,
+        "xmlRefs3220Count": 3,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/BW_85",
+        "baseline3200": "color/BW_85",
+        "target": "color/BW_85",
+        "baselineRid": "0x7f060053",
+        "targetRid": "0x7f060053",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "xml-slots:3",
+          "block:5"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {
+          "color/BW_85": 3
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 3,
+        "xmlRefs3220Count": 3,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/BW_90",
+        "baseline3200": "color/BW_90",
+        "target": "color/BW_90",
+        "baselineRid": "0x7f060054",
+        "targetRid": "0x7f060054",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "xml-slots:46",
+          "block:5"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {
+          "color/BW_90": 46
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 55,
+        "xmlRefs3220Count": 51,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/BW_93",
+        "baseline3200": "color/BW_93",
+        "target": "color/BW_93",
+        "baselineRid": "0x7f060055",
+        "targetRid": "0x7f060055",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "xml-slots:110",
+          "block:5"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {
+          "color/BW_93": 110
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 153,
+        "xmlRefs3220Count": 149,
+        "arscRefs3200Count": 16,
+        "arscRefs3220Count": 16,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/BW_93_Night_Mode",
+        "baseline3200": "color/BW_93_Night_Mode",
+        "target": "color/BW_93_Night_Mode",
+        "baselineRid": "0x7f060056",
+        "targetRid": "0x7f060056",
+        "candidateCount": 7,
+        "reasons": [
+          "xml-slots-unique:2"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {
+          "color/BW_93_Night_Mode": 2
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 2,
+        "xmlRefs3220Count": 2,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/BW_97",
+        "baseline3200": "color/BW_97",
+        "target": "color/BW_97",
+        "baselineRid": "0x7f060059",
+        "targetRid": "0x7f060059",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "xml-slots:47",
+          "block:5"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {
+          "color/BW_97": 47
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 87,
+        "xmlRefs3220Count": 84,
+        "arscRefs3200Count": 10,
+        "arscRefs3220Count": 10,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/BW_BG_100",
+        "baseline3200": "color/BW_BG_100",
+        "target": "color/BW_BG_100",
+        "baselineRid": "0x7f06005d",
+        "targetRid": "0x7f06005d",
+        "candidateCount": 23,
+        "reasons": [
+          "xml-slots-unique:15"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {
+          "color/BW_BG_100": 15
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 34,
+        "xmlRefs3220Count": 21,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/BW_BG_19",
+        "baseline3200": "color/BW_BG_19",
+        "target": "color/BW_BG_19",
+        "baselineRid": "0x7f06005e",
+        "targetRid": "0x7f06005e",
+        "candidateCount": 7,
+        "reasons": [
+          "xml-slots-unique:4"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {
+          "color/BW_BG_19": 4
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 4,
+        "xmlRefs3220Count": 4,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/BW_BG_20",
+        "baseline3200": "color/BW_BG_20",
+        "target": "color/BW_BG_20",
+        "baselineRid": "0x7f06005f",
+        "targetRid": "0x7f06005f",
+        "candidateCount": 6,
+        "reasons": [
+          "xml-slots-unique:7"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {
+          "color/BW_BG_20": 7
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 10,
+        "xmlRefs3220Count": 10,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/BW_BG_30",
+        "baseline3200": "color/BW_BG_30",
+        "target": "color/BW_BG_30",
+        "baselineRid": "0x7f060060",
+        "targetRid": "0x7f060060",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "xml-slots:6",
+          "block:5"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {
+          "color/BW_BG_30": 6
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 13,
+        "xmlRefs3220Count": 9,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/BW_BG_95",
+        "baseline3200": "color/BW_BG_95",
+        "target": "color/BW_BG_95",
+        "baselineRid": "0x7f060063",
+        "targetRid": "0x7f060063",
+        "candidateCount": 3,
+        "reasons": [
+          "xml-slots-unique:2"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {
+          "color/BW_BG_95": 2
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 4,
+        "xmlRefs3220Count": 2,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/BW_BG_98",
+        "baseline3200": "color/BW_BG_98",
+        "target": "color/BW_BG_98",
+        "baselineRid": "0x7f060064",
+        "targetRid": "0x7f060064",
+        "candidateCount": 2,
+        "reasons": [
+          "descriptive-name",
+          "block:5"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/Brand_100",
+        "baseline3200": "color/Brand_100",
+        "target": "color/Brand_100",
+        "baselineRid": "0x7f060084",
+        "targetRid": "0x7f060084",
+        "candidateCount": 4,
+        "reasons": [
+          "xml-slots-unique:62"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {
+          "color/Brand_100": 62
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 100,
+        "xmlRefs3220Count": 100,
+        "arscRefs3200Count": 7,
+        "arscRefs3220Count": 7,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/Brand_100_CARE",
+        "baseline3200": "color/Brand_100_CARE",
+        "target": "color/Brand_100_CARE",
+        "baselineRid": "0x7f060085",
+        "targetRid": "0x7f060085",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "xml-slots:3",
+          "block:5"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {
+          "color/Brand_100_CARE": 3
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 5,
+        "xmlRefs3220Count": 5,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/Brand_120",
+        "baseline3200": "color/Brand_120",
+        "target": "color/Brand_120",
+        "baselineRid": "0x7f060086",
+        "targetRid": "0x7f060086",
+        "candidateCount": 2,
+        "reasons": [
+          "descriptive-name",
+          "block:5"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 4,
+        "xmlRefs3220Count": 4,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/Brand_120_CARE",
+        "baseline3200": "color/Brand_120_CARE",
+        "target": "color/Brand_120_CARE",
+        "baselineRid": "0x7f060087",
+        "targetRid": "0x7f060087",
+        "candidateCount": 2,
+        "reasons": [
+          "descriptive-name",
+          "block:5"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/Brand_170",
+        "baseline3200": "color/Brand_170",
+        "target": "color/Brand_170",
+        "baselineRid": "0x7f060088",
+        "targetRid": "0x7f060088",
+        "candidateCount": 2,
+        "reasons": [
+          "xml-slots-unique:1"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {
+          "color/Brand_170": 1
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 2,
+        "arscRefs3220Count": 2,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/Brand_170_CARE",
+        "baseline3200": "color/Brand_170_CARE",
+        "target": "color/Brand_170_CARE",
+        "baselineRid": "0x7f060089",
+        "targetRid": "0x7f060089",
+        "candidateCount": 2,
+        "reasons": [
+          "descriptive-name",
+          "block:5"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/Brand_80",
+        "baseline3200": "color/Brand_80",
+        "target": "color/Brand_80",
+        "baselineRid": "0x7f06008a",
+        "targetRid": "0x7f06008a",
+        "candidateCount": 2,
+        "reasons": [
+          "xml-slots-unique:3"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {
+          "color/Brand_80": 3
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 3,
+        "xmlRefs3220Count": 3,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/Brand_80_CARE",
+        "baseline3200": "color/Brand_80_CARE",
+        "target": "color/Brand_80_CARE",
+        "baselineRid": "0x7f06008b",
+        "targetRid": "0x7f06008b",
+        "candidateCount": 2,
+        "reasons": [
+          "descriptive-name",
+          "block:5"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/Brand_90",
+        "baseline3200": "color/Brand_90",
+        "target": "color/Brand_90",
+        "baselineRid": "0x7f06008c",
+        "targetRid": "0x7f06008c",
+        "candidateCount": 2,
+        "reasons": [
+          "xml-slots-unique:6"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {
+          "color/Brand_90": 6
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 9,
+        "xmlRefs3220Count": 9,
+        "arscRefs3200Count": 1,
+        "arscRefs3220Count": 1,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/Brand_90_CARE",
+        "baseline3200": "color/Brand_90_CARE",
+        "target": "color/Brand_90_CARE",
+        "baselineRid": "0x7f06008d",
+        "targetRid": "0x7f06008d",
+        "candidateCount": 2,
+        "reasons": [
+          "descriptive-name",
+          "block:5"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 2,
+        "xmlRefs3220Count": 2,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/Brand_BG_100",
+        "baseline3200": "color/Brand_BG_100",
+        "target": "color/Brand_BG_100",
+        "baselineRid": "0x7f060093",
+        "targetRid": "0x7f060093",
+        "candidateCount": 2,
+        "reasons": [
+          "xml-slots-unique:1"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {
+          "color/Brand_BG_100": 1
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 1,
+        "arscRefs3220Count": 1,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/Brand_BG_100_CARE",
+        "baseline3200": "color/Brand_BG_100_CARE",
+        "target": "color/Brand_BG_100_CARE",
+        "baselineRid": "0x7f060094",
+        "targetRid": "0x7f060094",
+        "candidateCount": 2,
+        "reasons": [
+          "xml-slots-unique:1"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {
+          "color/Brand_BG_100_CARE": 1
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/Brand_BG_110",
+        "baseline3200": "color/Brand_BG_110",
+        "target": "color/Brand_BG_110",
+        "baselineRid": "0x7f060095",
+        "targetRid": "0x7f060095",
+        "candidateCount": 2,
+        "reasons": [
+          "descriptive-name",
+          "block:5"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/Brand_BG_110_CARE",
+        "baseline3200": "color/Brand_BG_110_CARE",
+        "target": "color/Brand_BG_110_CARE",
+        "baselineRid": "0x7f060096",
+        "targetRid": "0x7f060096",
+        "candidateCount": 2,
+        "reasons": [
+          "descriptive-name",
+          "block:5"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/Brand_BG_130",
+        "baseline3200": "color/Brand_BG_130",
+        "target": "color/Brand_BG_130",
+        "baselineRid": "0x7f060097",
+        "targetRid": "0x7f060097",
+        "candidateCount": 2,
+        "reasons": [
+          "descriptive-name",
+          "block:5"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/Brand_BG_130_CARE",
+        "baseline3200": "color/Brand_BG_130_CARE",
+        "target": "color/Brand_BG_130_CARE",
+        "baselineRid": "0x7f060098",
+        "targetRid": "0x7f060098",
+        "candidateCount": 2,
+        "reasons": [
+          "descriptive-name",
+          "block:5"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/Brand_BG_90",
+        "baseline3200": "color/Brand_BG_90",
+        "target": "color/Brand_BG_90",
+        "baselineRid": "0x7f060099",
+        "targetRid": "0x7f060099",
+        "candidateCount": 2,
+        "reasons": [
+          "descriptive-name",
+          "block:5"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/Brand_BG_90_CARE",
+        "baseline3200": "color/Brand_BG_90_CARE",
+        "target": "color/Brand_BG_90_CARE",
+        "baselineRid": "0x7f06009a",
+        "targetRid": "0x7f06009a",
+        "candidateCount": 2,
+        "reasons": [
+          "descriptive-name",
+          "block:5"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/LightGreen_100",
+        "baseline3200": "color/LightGreen_100",
+        "target": "color/LightGreen_100",
+        "baselineRid": "0x7f060142",
+        "targetRid": "0x7f060142",
+        "candidateCount": 2,
+        "reasons": [
+          "xml-slots-unique:1"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {
+          "color/LightGreen_100": 1
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/LightGreen_100_CARE",
+        "baseline3200": "color/LightGreen_100_CARE",
+        "target": "color/LightGreen_100_CARE",
+        "baselineRid": "0x7f060143",
+        "targetRid": "0x7f060143",
+        "candidateCount": 2,
+        "reasons": [
+          "descriptive-name",
+          "block:5"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/LinkFinder_100",
+        "baseline3200": "color/LinkFinder_100",
+        "target": "color/LinkFinder_100",
+        "baselineRid": "0x7f060155",
+        "targetRid": "0x7f060155",
+        "candidateCount": 2,
+        "reasons": [
+          "xml-slots-unique:10"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {
+          "color/LinkFinder_100": 10
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 15,
+        "xmlRefs3220Count": 15,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/LinkFinder_100_CARE",
+        "baseline3200": "color/LinkFinder_100_CARE",
+        "target": "color/LinkFinder_100_CARE",
+        "baselineRid": "0x7f060156",
+        "targetRid": "0x7f060156",
+        "candidateCount": 2,
+        "reasons": [
+          "descriptive-name",
+          "block:5"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/Link_100",
+        "baseline3200": "color/Link_100",
+        "target": "color/Link_100",
+        "baselineRid": "0x7f060157",
+        "targetRid": "0x7f060157",
+        "candidateCount": 2,
+        "reasons": [
+          "xml-slots-unique:141"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {
+          "color/Link_100": 141
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 233,
+        "xmlRefs3220Count": 235,
+        "arscRefs3200Count": 4,
+        "arscRefs3220Count": 4,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/Link_100_CARE",
+        "baseline3200": "color/Link_100_CARE",
+        "target": "color/Link_100_CARE",
+        "baselineRid": "0x7f060158",
+        "targetRid": "0x7f060158",
+        "candidateCount": 2,
+        "reasons": [
+          "descriptive-name",
+          "block:5"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/Red_100",
+        "baseline3200": "color/Red_100",
+        "target": "color/Red_100",
+        "baselineRid": "0x7f0601bc",
+        "targetRid": "0x7f0601bc",
+        "candidateCount": 5,
+        "reasons": [
+          "xml-slots-unique:16"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {
+          "color/Red_100": 16
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 34,
+        "xmlRefs3220Count": 38,
+        "arscRefs3200Count": 4,
+        "arscRefs3220Count": 4,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/Red_90",
+        "baseline3200": "color/Red_90",
+        "target": "color/Red_90",
+        "baselineRid": "0x7f0601c5",
+        "targetRid": "0x7f0601c5",
+        "candidateCount": 2,
+        "reasons": [
+          "xml-slots-unique:4"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {
+          "color/Red_90": 4
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 4,
+        "xmlRefs3220Count": 4,
+        "arscRefs3200Count": 2,
+        "arscRefs3220Count": 2,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/Red_90_CARE",
+        "baseline3200": "color/Red_90_CARE",
+        "target": "color/Red_90_CARE",
+        "baselineRid": "0x7f0601c6",
+        "targetRid": "0x7f0601c6",
+        "candidateCount": 2,
+        "reasons": [
+          "descriptive-name",
+          "block:5"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/UN_BW_100_Alpha_0_8",
+        "baseline3200": "color/UN_BW_100_Alpha_0_8",
+        "target": "color/UN_BW_100_Alpha_0_8",
+        "baselineRid": "0x7f060274",
+        "targetRid": "0x7f060275",
+        "candidateCount": 26,
+        "reasons": [
+          "xml-slots-unique:34"
+        ],
+        "blockSpan": 78,
+        "xmlSlotVotes": {
+          "color/UN_BW_100_Alpha_0_8": 34
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 42,
+        "xmlRefs3220Count": 42,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/UN_BW_93",
+        "baseline3200": "color/UN_BW_93",
+        "target": "color/UN_BW_93",
+        "baselineRid": "0x7f060276",
+        "targetRid": "0x7f060277",
+        "candidateCount": 7,
+        "reasons": [
+          "xml-slots-unique:5"
+        ],
+        "blockSpan": 78,
+        "xmlSlotVotes": {
+          "color/UN_BW_93": 5
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 5,
+        "xmlRefs3220Count": 5,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/Yellow_BG_100",
+        "baseline3200": "color/Yellow_BG_100",
+        "target": "color/Yellow_BG_100",
+        "baselineRid": "0x7f06028e",
+        "targetRid": "0x7f06028f",
+        "candidateCount": 2,
+        "reasons": [
+          "descriptive-name",
+          "block:5"
+        ],
+        "blockSpan": 78,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes13.dex:Ljf5/j;->getColor",
+          "classes13.dex:Ljf5/j;->getColorStateList"
+        ],
+        "dexCallsites3220": [
+          "classes14.dex:Lbf5/j;->getColor",
+          "classes14.dex:Lbf5/j;->getColorStateList"
+        ]
+      },
+      {
+        "source": "color/Yellow_BG_100_CARE",
+        "baseline3200": "color/Yellow_BG_100_CARE",
+        "target": "color/Yellow_BG_100_CARE",
+        "baselineRid": "0x7f06028f",
+        "targetRid": "0x7f060290",
+        "candidateCount": 2,
+        "reasons": [
+          "descriptive-name",
+          "block:5"
+        ],
+        "blockSpan": 78,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes13.dex:Ljf5/j;->getColor",
+          "classes13.dex:Ljf5/j;->getColorStateList"
+        ],
+        "dexCallsites3220": [
+          "classes14.dex:Lbf5/j;->getColor",
+          "classes14.dex:Lbf5/j;->getColorStateList"
+        ]
+      },
+      {
+        "source": "color/a",
+        "baseline3200": "color/a",
+        "target": "color/a",
+        "baselineRid": "0x7f060008",
+        "targetRid": "0x7f060008",
+        "candidateCount": 3,
+        "reasons": [
+          "xml-slots-unique:244"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {
+          "color/a": 244
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 366,
+        "xmlRefs3220Count": 370,
+        "arscRefs3200Count": 10,
+        "arscRefs3220Count": 10,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/a0p",
+        "baseline3200": "color/a0p",
+        "target": "color/a0p",
+        "baselineRid": "0x7f060947",
+        "targetRid": "0x7f060940",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "block:5"
+        ],
+        "blockSpan": 138,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes3.dex:Lcom/tencent/mm/plugin/exdevice/ui/ColorfulCircleProgress;-><init>"
+        ],
+        "dexCallsites3220": [
+          "classes4.dex:Lcom/tencent/mm/plugin/exdevice/ui/ColorfulCircleProgress;-><init>"
+        ]
+      },
+      {
+        "source": "color/a0q",
+        "baseline3200": "color/a0q",
+        "target": "color/a0q",
+        "baselineRid": "0x7f060948",
+        "targetRid": "0x7f060941",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "block:5"
+        ],
+        "blockSpan": 138,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes3.dex:Lcom/tencent/mm/plugin/exdevice/ui/ColorfulCircleProgress;-><init>"
+        ],
+        "dexCallsites3220": [
+          "classes4.dex:Lcom/tencent/mm/plugin/exdevice/ui/ColorfulCircleProgress;-><init>"
+        ]
+      },
+      {
+        "source": "color/a1g",
+        "baseline3200": "color/a1g",
+        "target": "color/a1g",
+        "baselineRid": "0x7f060970",
+        "targetRid": "0x7f060969",
+        "candidateCount": 2,
+        "reasons": [
+          "block-unique:5"
+        ],
+        "blockSpan": 138,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/a1o",
+        "baseline3200": "color/a1o",
+        "target": "color/a1o",
+        "baselineRid": "0x7f06097a",
+        "targetRid": "0x7f060973",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "block:5"
+        ],
+        "blockSpan": 138,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/a1p",
+        "baseline3200": "color/a1p",
+        "target": "color/a1p",
+        "baselineRid": "0x7f06097b",
+        "targetRid": "0x7f060974",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "xml-slots:1",
+          "block:5"
+        ],
+        "blockSpan": 138,
+        "xmlSlotVotes": {
+          "color/a1p": 1
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/a1x",
+        "baseline3200": "color/a1x",
+        "target": "color/a1x",
+        "baselineRid": "0x7f060985",
+        "targetRid": "0x7f06097e",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "block:5"
+        ],
+        "blockSpan": 138,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes3.dex:Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->onDraw"
+        ],
+        "dexCallsites3220": [
+          "classes4.dex:Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->onDraw"
+        ]
+      },
+      {
+        "source": "color/a21",
+        "baseline3200": "color/a21",
+        "target": "color/a21",
+        "baselineRid": "0x7f06099b",
+        "targetRid": "0x7f060993",
+        "candidateCount": 9,
+        "reasons": [
+          "xml-slots-unique:1"
+        ],
+        "blockSpan": 138,
+        "xmlSlotVotes": {
+          "color/a21": 1
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/a24",
+        "baseline3200": "color/a24",
+        "target": "color/a24",
+        "baselineRid": "0x7f06099e",
+        "targetRid": "0x7f060996",
+        "candidateCount": 2,
+        "reasons": [
+          "block-unique:5"
+        ],
+        "blockSpan": 138,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes14.dex:Lcom/tencent/mm/plugin/remittance/ui/RemittanceBaseUI;->K7",
+          "classes14.dex:Lcom/tencent/mm/plugin/remittance/ui/RemittanceNewBaseUI;->W7"
+        ],
+        "dexCallsites3220": [
+          "classes13.dex:Lcom/tencent/mm/plugin/remittance/ui/RemittanceBaseUI;->S7",
+          "classes13.dex:Lcom/tencent/mm/plugin/remittance/ui/RemittanceNewBaseUI;->f8"
+        ]
+      },
+      {
+        "source": "color/a25",
+        "baseline3200": "color/a25",
+        "target": "color/a25",
+        "baselineRid": "0x7f06099f",
+        "targetRid": "0x7f060997",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "xml-slots:1",
+          "block:5"
+        ],
+        "blockSpan": 138,
+        "xmlSlotVotes": {
+          "color/a25": 1
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/a28",
+        "baseline3200": "color/a28",
+        "target": "color/a28",
+        "baselineRid": "0x7f0609a2",
+        "targetRid": "0x7f06099a",
+        "candidateCount": 4,
+        "reasons": [
+          "xml-slots-unique:2"
+        ],
+        "blockSpan": 138,
+        "xmlSlotVotes": {
+          "color/a28": 2
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 2,
+        "xmlRefs3220Count": 2,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/a29",
+        "baseline3200": "color/a29",
+        "target": "color/a29",
+        "baselineRid": "0x7f0609a3",
+        "targetRid": "0x7f06099b",
+        "candidateCount": 9,
+        "reasons": [
+          "xml-slots-unique:1"
+        ],
+        "blockSpan": 138,
+        "xmlSlotVotes": {
+          "color/a29": 1
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/a2f",
+        "baseline3200": "color/a2f",
+        "target": "color/a2f",
+        "baselineRid": "0x7f0609ab",
+        "targetRid": "0x7f0609a3",
+        "candidateCount": 20,
+        "reasons": [
+          "xml-slots-unique:1"
+        ],
+        "blockSpan": 138,
+        "xmlSlotVotes": {
+          "color/a2f": 1
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/a2g",
+        "baseline3200": "color/a2g",
+        "target": "color/a2g",
+        "baselineRid": "0x7f0609ac",
+        "targetRid": "0x7f0609a4",
+        "candidateCount": 16,
+        "reasons": [
+          "xml-slots-unique:1"
+        ],
+        "blockSpan": 138,
+        "xmlSlotVotes": {
+          "color/a2g": 1
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/a2n",
+        "baseline3200": "color/a2n",
+        "target": "color/a2n",
+        "baselineRid": "0x7f0609b6",
+        "targetRid": "0x7f0609ae",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "block:5"
+        ],
+        "blockSpan": 138,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes3.dex:Lw24/j;->b"
+        ],
+        "dexCallsites3220": [
+          "classes10.dex:La34/j;->b"
+        ]
+      },
+      {
+        "source": "color/a2o",
+        "baseline3200": "color/a2o",
+        "target": "color/a2o",
+        "baselineRid": "0x7f0609b7",
+        "targetRid": "0x7f0609af",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "block:5"
+        ],
+        "blockSpan": 138,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes3.dex:Lw24/j;->b"
+        ],
+        "dexCallsites3220": [
+          "classes10.dex:La34/j;->b"
+        ]
+      },
+      {
+        "source": "color/a2p",
+        "baseline3200": "color/a2p",
+        "target": "color/a2p",
+        "baselineRid": "0x7f0609b8",
+        "targetRid": "0x7f0609b0",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "block:5"
+        ],
+        "blockSpan": 138,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes3.dex:Lw24/j;->b"
+        ],
+        "dexCallsites3220": [
+          "classes10.dex:La34/j;->b"
+        ]
+      },
+      {
+        "source": "color/a2r",
+        "baseline3200": "color/a2r",
+        "target": "color/a2r",
+        "baselineRid": "0x7f0609ba",
+        "targetRid": "0x7f0609b2",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "block:5"
+        ],
+        "blockSpan": 138,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes3.dex:Lw24/j;->b"
+        ],
+        "dexCallsites3220": [
+          "classes10.dex:La34/j;->b"
+        ]
+      },
+      {
+        "source": "color/a2s",
+        "baseline3200": "color/a2s",
+        "target": "color/a2s",
+        "baselineRid": "0x7f0609bb",
+        "targetRid": "0x7f0609b3",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "block:5"
+        ],
+        "blockSpan": 138,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes3.dex:Lw24/j;->b"
+        ],
+        "dexCallsites3220": [
+          "classes10.dex:La34/j;->b"
+        ]
+      },
+      {
+        "source": "color/a2u",
+        "baseline3200": "color/a2u",
+        "target": "color/a2u",
+        "baselineRid": "0x7f0609bd",
+        "targetRid": "0x7f0609b5",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "block:5"
+        ],
+        "blockSpan": 138,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes3.dex:Lw24/j;->b"
+        ],
+        "dexCallsites3220": [
+          "classes10.dex:La34/j;->b"
+        ]
+      },
+      {
+        "source": "color/a2w",
+        "baseline3200": "color/a2w",
+        "target": "color/a2w",
+        "baselineRid": "0x7f0609bf",
+        "targetRid": "0x7f0609b7",
+        "candidateCount": 5,
+        "reasons": [
+          "block-unique:5"
+        ],
+        "blockSpan": 138,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/a2x",
+        "baseline3200": "color/a2x",
+        "target": "color/a2x",
+        "baselineRid": "0x7f0609c0",
+        "targetRid": "0x7f0609b8",
+        "candidateCount": 32,
+        "reasons": [
+          "block-unique:5"
+        ],
+        "blockSpan": 138,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 1,
+        "arscRefs3220Count": 1,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/a32",
+        "baseline3200": "color/a32",
+        "target": "color/a32",
+        "baselineRid": "0x7f0609c8",
+        "targetRid": "0x7f0609c0",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "xml-slots:6",
+          "block:5"
+        ],
+        "blockSpan": 138,
+        "xmlSlotVotes": {
+          "color/a32": 6
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 6,
+        "xmlRefs3220Count": 6,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/a36",
+        "baseline3200": "color/a36",
+        "target": "color/a36",
+        "baselineRid": "0x7f0609cf",
+        "targetRid": "0x7f0609c7",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "xml-slots:4",
+          "block:5"
+        ],
+        "blockSpan": 138,
+        "xmlSlotVotes": {
+          "color/a36": 4
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 4,
+        "xmlRefs3220Count": 4,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/a37",
+        "baseline3200": "color/a37",
+        "target": "color/a37",
+        "baselineRid": "0x7f0609d0",
+        "targetRid": "0x7f0609c8",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "block:5"
+        ],
+        "blockSpan": 138,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes8.dex:Lt54/k;->h"
+        ],
+        "dexCallsites3220": [
+          "classes10.dex:Lx54/k;->h"
+        ]
+      },
+      {
+        "source": "color/a3a",
+        "baseline3200": "color/a3a",
+        "target": "color/a3a",
+        "baselineRid": "0x7f0609d8",
+        "targetRid": "0x7f0609d0",
+        "candidateCount": 9,
+        "reasons": [
+          "block-unique:5"
+        ],
+        "blockSpan": 138,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes11.dex:Lcom/tencent/mm/ui/chatting/ChattingUIFragment;->M0",
+          "classes13.dex:Lcom/tencent/mm/ui/NewChattingTabUI;->g"
+        ],
+        "dexCallsites3220": [
+          "classes11.dex:Lcom/tencent/mm/ui/chatting/ChattingUIFragment;->K0",
+          "classes15.dex:Lcom/tencent/mm/ui/NewChattingTabUI;->h"
+        ]
+      },
+      {
+        "source": "color/a40",
+        "baseline3200": "color/a40",
+        "target": "color/a40",
+        "baselineRid": "0x7f060a14",
+        "targetRid": "0x7f0609fd",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "block:5"
+        ],
+        "blockSpan": 35,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes14.dex:Lcom/tencent/mm/chatroom/ui/kf;-><init>"
+        ],
+        "dexCallsites3220": [
+          "classes13.dex:Lcom/tencent/mm/chatroom/ui/kf;-><init>"
+        ]
+      },
+      {
+        "source": "color/a4v",
+        "baseline3200": "color/a4v",
+        "target": "color/a4v",
+        "baselineRid": "0x7f060a57",
+        "targetRid": "0x7f060a40",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "block:5"
+        ],
+        "blockSpan": 53,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes12.dex:Lcom/tencent/mm/plugin/sns/ad/timeline/feedback/d;->e",
+          "classes12.dex:Lnh4/d;->j"
+        ],
+        "dexCallsites3220": [
+          "classes6.dex:Lcom/tencent/mm/plugin/sns/ad/timeline/feedback/d;->e",
+          "classes6.dex:Lmh4/d;->j"
+        ]
+      },
+      {
+        "source": "color/a4z",
+        "baseline3200": "color/a4z",
+        "target": "color/a4z",
+        "baselineRid": "0x7f060a5e",
+        "targetRid": "0x7f060a47",
+        "candidateCount": 3,
+        "reasons": [
+          "block-unique:5"
+        ],
+        "blockSpan": 53,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes4.dex:Lae4/b;->c"
+        ],
+        "dexCallsites3220": [
+          "classes6.dex:Lzd4/b;->c"
+        ]
+      },
+      {
+        "source": "color/a67",
+        "baseline3200": "color/a67",
+        "target": "color/a67",
+        "baselineRid": "0x7f060aaa",
+        "targetRid": "0x7f060a93",
+        "candidateCount": 8,
+        "reasons": [
+          "block-unique:5"
+        ],
+        "blockSpan": 180,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes12.dex:Lcom/tencent/mm/plugin/sns/ui/rz;->run",
+          "classes5.dex:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$64;->onClick",
+          "classes5.dex:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->D8"
+        ],
+        "dexCallsites3220": [
+          "classes6.dex:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$64;->onClick",
+          "classes6.dex:Lcom/tencent/mm/plugin/sns/ui/uz;->run",
+          "classes6.dex:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->N8"
+        ]
+      },
+      {
+        "source": "color/a6c",
+        "baseline3200": "color/a6c",
+        "target": "color/a6c",
+        "baselineRid": "0x7f060ab1",
+        "targetRid": "0x7f060a9a",
+        "candidateCount": 7,
+        "reasons": [
+          "xml-slots-unique:1"
+        ],
+        "blockSpan": 180,
+        "xmlSlotVotes": {
+          "color/a6c": 1
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/a6f",
+        "baseline3200": "color/a6f",
+        "target": "color/a6f",
+        "baselineRid": "0x7f060ab8",
+        "targetRid": "0x7f060aa1",
+        "candidateCount": 3,
+        "reasons": [
+          "xml-slots-unique:1"
+        ],
+        "blockSpan": 180,
+        "xmlSlotVotes": {
+          "color/a6f": 1
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/a7a",
+        "baseline3200": "color/a7a",
+        "target": "color/a7a",
+        "baselineRid": "0x7f060aef",
+        "targetRid": "0x7f060ad8",
+        "candidateCount": 26,
+        "reasons": [
+          "block-unique:5"
+        ],
+        "blockSpan": 180,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 2,
+        "xmlRefs3220Count": 2,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/a7f",
+        "baseline3200": "color/a7f",
+        "target": "color/a7f",
+        "baselineRid": "0x7f060af4",
+        "targetRid": "0x7f060add",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "block:5"
+        ],
+        "blockSpan": 180,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/a7g",
+        "baseline3200": "color/a7g",
+        "target": "color/a7g",
+        "baselineRid": "0x7f060afb",
+        "targetRid": "0x7f060ae4",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "xml-slots:1",
+          "block:5"
+        ],
+        "blockSpan": 180,
+        "xmlSlotVotes": {
+          "color/a7g": 1
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/a8b",
+        "baseline3200": "color/a8b",
+        "target": "color/a8b",
+        "baselineRid": "0x7f060b2c",
+        "targetRid": "0x7f060b15",
+        "candidateCount": 20,
+        "reasons": [
+          "xml-slots-unique:1"
+        ],
+        "blockSpan": 180,
+        "xmlSlotVotes": {
+          "color/a8b": 1
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/a8s",
+        "baseline3200": "color/a8s",
+        "target": "color/a8s",
+        "baselineRid": "0x7f060b45",
+        "targetRid": "0x7f060b2e",
+        "candidateCount": 23,
+        "reasons": [
+          "xml-slots-unique:4"
+        ],
+        "blockSpan": 180,
+        "xmlSlotVotes": {
+          "color/a8s": 4
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 12,
+        "xmlRefs3220Count": 12,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/a8t",
+        "baseline3200": "color/a8t",
+        "target": "color/a8t",
+        "baselineRid": "0x7f060b48",
+        "targetRid": "0x7f060b31",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "block:5"
+        ],
+        "blockSpan": 180,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes12.dex:Lcom/tencent/mm/plugin/ting/widget/TingCategoryMvvmView;->g"
+        ],
+        "dexCallsites3220": [
+          "classes13.dex:Lcom/tencent/mm/plugin/ting/widget/TingCategoryMvvmView;->g"
+        ]
+      },
+      {
+        "source": "color/a8w",
+        "baseline3200": "color/a8w",
+        "target": "color/a8w",
+        "baselineRid": "0x7f060b4f",
+        "targetRid": "0x7f060b38",
+        "candidateCount": 20,
+        "reasons": [
+          "xml-slots-unique:6"
+        ],
+        "blockSpan": 180,
+        "xmlSlotVotes": {
+          "color/a8w": 6
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 10,
+        "xmlRefs3220Count": 10,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/a94",
+        "baseline3200": "color/a94",
+        "target": "color/a94",
+        "baselineRid": "0x7f060b5c",
+        "targetRid": "0x7f060b45",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "block:5"
+        ],
+        "blockSpan": 180,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/a_g",
+        "baseline3200": "color/a_g",
+        "target": "color/a_g",
+        "baselineRid": "0x7f060bce",
+        "targetRid": "0x7f060bb7",
+        "candidateCount": 2,
+        "reasons": [
+          "descriptive-name",
+          "block:5"
+        ],
+        "blockSpan": 75,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes11.dex:Lcom/tencent/mm/ui/chatting/viewitems/ar;->n"
+        ],
+        "dexCallsites3220": [
+          "classes11.dex:Lcom/tencent/mm/ui/chatting/viewitems/ar;->n"
+        ]
+      },
+      {
+        "source": "color/a_l",
+        "baseline3200": "color/a_l",
+        "target": "color/a_l",
+        "baselineRid": "0x7f060bdf",
+        "targetRid": "0x7f060bc8",
+        "candidateCount": 3,
+        "reasons": [
+          "xml-slots-unique:1"
+        ],
+        "blockSpan": 75,
+        "xmlSlotVotes": {
+          "color/a_l": 1
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/aa4",
+        "baseline3200": "color/aa4",
+        "target": "color/aa4",
+        "baselineRid": "0x7f060c04",
+        "targetRid": "0x7f060bed",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "block:3"
+        ],
+        "blockSpan": 64,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes12.dex:Lcom/tencent/mm/plugin/wallet_core/ui/x4;->a",
+          "classes12.dex:Lcom/tencent/mm/plugin/wallet_core/ui/x4;->c",
+          "classes14.dex:Lcom/tencent/mm/plugin/offline/ui/x2;->onCreateMMMenu",
+          "classes14.dex:Lcom/tencent/mm/plugin/wallet/balance/ui/w;->onCreateMMMenu",
+          "classes5.dex:Lcom/tencent/mm/plugin/wallet/balance/ui/lqt/b3;->onCreateMMMenu",
+          "classes5.dex:Lcom/tencent/mm/plugin/wallet/balance/ui/n1;->onCreateMMMenu"
+        ],
+        "dexCallsites3220": [
+          "classes13.dex:Lcom/tencent/mm/plugin/wallet/balance/ui/lqt/g0;->onCreateMMMenu",
+          "classes13.dex:Lcom/tencent/mm/plugin/wallet_core/ui/q4;->a",
+          "classes13.dex:Lcom/tencent/mm/plugin/wallet_core/ui/q4;->c"
+        ]
+      },
+      {
+        "source": "color/aab",
+        "baseline3200": "color/aab",
+        "target": "color/aab",
+        "baselineRid": "0x7f060c22",
+        "targetRid": "0x7f060c0b",
+        "candidateCount": 17,
+        "reasons": [
+          "xml-slots-unique:1"
+        ],
+        "blockSpan": 64,
+        "xmlSlotVotes": {
+          "color/aab": 1
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/aad",
+        "baseline3200": "color/aad",
+        "target": "color/aad",
+        "baselineRid": "0x7f060c27",
+        "targetRid": "0x7f060c10",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "xml-slots:1",
+          "block:5"
+        ],
+        "blockSpan": 64,
+        "xmlSlotVotes": {
+          "color/aad": 1
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/aaq",
+        "baseline3200": "color/aaq",
+        "target": "color/aaq",
+        "baselineRid": "0x7f060c3a",
+        "targetRid": "0x7f060c23",
+        "candidateCount": 9,
+        "reasons": [
+          "xml-slots-unique:94"
+        ],
+        "blockSpan": 64,
+        "xmlSlotVotes": {
+          "color/aaq": 94
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 137,
+        "xmlRefs3220Count": 139,
+        "arscRefs3200Count": 8,
+        "arscRefs3220Count": 8,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/aav",
+        "baseline3200": "color/aav",
+        "target": "color/aav",
+        "baselineRid": "0x7f060c46",
+        "targetRid": "0x7f060c2f",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "xml-slots:1",
+          "block:5"
+        ],
+        "blockSpan": 64,
+        "xmlSlotVotes": {
+          "color/aav": 1
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/ab1",
+        "baseline3200": "color/ab1",
+        "target": "color/ab1",
+        "baselineRid": "0x7f060c4d",
+        "targetRid": "0x7f060c36",
+        "candidateCount": 6,
+        "reasons": [
+          "xml-slots-unique:1"
+        ],
+        "blockSpan": 64,
+        "xmlSlotVotes": {
+          "color/ab1": 1
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 5,
+        "xmlRefs3220Count": 5,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/abv",
+        "baseline3200": "color/abv",
+        "target": "color/abv",
+        "baselineRid": "0x7f0600ad",
+        "targetRid": "0x7f0600ad",
+        "candidateCount": 4,
+        "reasons": [
+          "block-unique:5"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes2.dex:Lyq/c;->invoke",
+          "classes3.dex:Lcom/tencent/mm/ui/widget/button/WeButton;-><init>",
+          "classes3.dex:Lcom/tencent/mm/ui/widget/button/WeButton;->setBackgroundColor",
+          "classes3.dex:Lcom/tencent/mm/ui/widget/button/WeButton;->setTextColor"
+        ],
+        "dexCallsites3220": [
+          "classes2.dex:Lbr/c;->invoke",
+          "classes4.dex:Lcom/tencent/mm/ui/widget/button/WeButton;-><init>",
+          "classes4.dex:Lcom/tencent/mm/ui/widget/button/WeButton;->setBackgroundColor",
+          "classes4.dex:Lcom/tencent/mm/ui/widget/button/WeButton;->setTextColor"
+        ]
+      },
+      {
+        "source": "color/ad9",
+        "baseline3200": "color/ad9",
+        "target": "color/ad9",
+        "baselineRid": "0x7f060a0d",
+        "targetRid": "0x7f0609f8",
+        "candidateCount": 17,
+        "reasons": [
+          "block-unique:5"
+        ],
+        "blockSpan": 35,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes3.dex:Lcom/tencent/mm/mj_publisher/finder/movie_composing/widgets/SectionSeekBar;-><init>"
+        ],
+        "dexCallsites3220": [
+          "classes4.dex:Lcom/tencent/mm/mj_publisher/finder/movie_composing/widgets/SectionSeekBar;-><init>"
+        ]
+      },
+      {
+        "source": "color/aex",
+        "baseline3200": "color/aex",
+        "target": "color/aex",
+        "baselineRid": "0x7f0605f6",
+        "targetRid": "0x7f0605f6",
+        "candidateCount": 2,
+        "reasons": [
+          "xml-slots-unique:16"
+        ],
+        "blockSpan": 226,
+        "xmlSlotVotes": {
+          "color/aex": 16
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 16,
+        "xmlRefs3220Count": 16,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/af2",
+        "baseline3200": "color/af2",
+        "target": "color/af2",
+        "baselineRid": "0x7f060610",
+        "targetRid": "0x7f060610",
+        "candidateCount": 2,
+        "reasons": [
+          "block-unique:5"
+        ],
+        "blockSpan": 226,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes13.dex:Lul2/h;->invokeSuspend"
+        ],
+        "dexCallsites3220": [
+          "classes4.dex:Lkm2/h;->invokeSuspend"
+        ]
+      },
+      {
+        "source": "color/af6",
+        "baseline3200": "color/af6",
+        "target": "color/af6",
+        "baselineRid": "0x7f060645",
+        "targetRid": "0x7f060645",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "block:5"
+        ],
+        "blockSpan": 226,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes9.dex:Lqp2/g0;-><init>",
+          "classes9.dex:Lup2/k;-><init>"
+        ],
+        "dexCallsites3220": [
+          "classes9.dex:Liq2/g0;-><init>",
+          "classes9.dex:Lmq2/k;-><init>"
+        ]
+      },
+      {
+        "source": "color/af_",
+        "baseline3200": "color/af_",
+        "target": "color/af_",
+        "baselineRid": "0x7f06036f",
+        "targetRid": "0x7f06036d",
+        "candidateCount": 3,
+        "reasons": [
+          "xml-slots-unique:6"
+        ],
+        "blockSpan": 455,
+        "xmlSlotVotes": {
+          "color/af_": 6
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 6,
+        "xmlRefs3220Count": 6,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/afc",
+        "baseline3200": "color/afc",
+        "target": "color/afc",
+        "baselineRid": "0x7f060a72",
+        "targetRid": "0x7f060a5b",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "block:5"
+        ],
+        "blockSpan": 53,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes4.dex:Lcg4/b;->b"
+        ],
+        "dexCallsites3220": [
+          "classes6.dex:Lbg4/b;->b"
+        ]
+      },
+      {
+        "source": "color/ags",
+        "baseline3200": "color/agy",
+        "target": "color/agy",
+        "baselineRid": "0x7f060131",
+        "targetRid": "0x7f060131",
+        "candidateCount": 4,
+        "reasons": [
+          "block-unique:5"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes3.dex:Lcom/tencent/mm/plugin/finder/live/viewmodel/q3;->invoke"
+        ],
+        "dexCallsites3220": [
+          "classes.dex:Lcom/tencent/mm/plugin/finder/live/viewmodel/s3;->invoke"
+        ]
+      },
+      {
+        "source": "color/ahf",
+        "baseline3200": "color/ahr",
+        "target": "color/ahr",
+        "baselineRid": "0x7f060211",
+        "targetRid": "0x7f060211",
+        "candidateCount": 21,
+        "reasons": [
+          "xml-slots-unique:4"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {
+          "color/ahr": 4
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 8,
+        "xmlRefs3220Count": 8,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/ahk",
+        "baseline3200": "color/ahw",
+        "target": "color/ahw",
+        "baselineRid": "0x7f060236",
+        "targetRid": "0x7f060236",
+        "candidateCount": 21,
+        "reasons": [
+          "xml-slots-unique:2"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {
+          "color/ahw": 2
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 5,
+        "xmlRefs3220Count": 5,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/ajm",
+        "baseline3200": "color/ak8",
+        "target": "color/ak9",
+        "baselineRid": "0x7f060573",
+        "targetRid": "0x7f060572",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "xml-slots:1",
+          "block:5"
+        ],
+        "blockSpan": 90,
+        "xmlSlotVotes": {
+          "color/ak9": 1
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/ak_",
+        "baseline3200": "color/al2",
+        "target": "color/al2",
+        "baselineRid": "0x7f060629",
+        "targetRid": "0x7f060629",
+        "candidateCount": 3,
+        "reasons": [
+          "block-unique:5"
+        ],
+        "blockSpan": 226,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/aki",
+        "baseline3200": "color/ald",
+        "target": "color/ald",
+        "baselineRid": "0x7f060655",
+        "targetRid": "0x7f060655",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "block:5"
+        ],
+        "blockSpan": 226,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes3.dex:Lm53/g0;->updateDrawState",
+          "classes3.dex:Lm53/j0;->updateDrawState"
+        ],
+        "dexCallsites3220": [
+          "classes.dex:Lc63/j0;->updateDrawState",
+          "classes4.dex:Lc63/g0;->updateDrawState"
+        ]
+      },
+      {
+        "source": "color/akl",
+        "baseline3200": "color/alg",
+        "target": "color/alg",
+        "baselineRid": "0x7f06066c",
+        "targetRid": "0x7f06066c",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "block:5"
+        ],
+        "blockSpan": 226,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/akp",
+        "baseline3200": "color/alk",
+        "target": "color/alk",
+        "baselineRid": "0x7f060672",
+        "targetRid": "0x7f060672",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "xml-slots:1",
+          "block:5"
+        ],
+        "blockSpan": 226,
+        "xmlSlotVotes": {
+          "color/alk": 1
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/akt",
+        "baseline3200": "color/alo",
+        "target": "color/alo",
+        "baselineRid": "0x7f060685",
+        "targetRid": "0x7f060685",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "xml-slots:1",
+          "block:5"
+        ],
+        "blockSpan": 226,
+        "xmlSlotVotes": {
+          "color/alo": 1
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/akw",
+        "baseline3200": "color/alr",
+        "target": "color/alr",
+        "baselineRid": "0x7f06069a",
+        "targetRid": "0x7f06069a",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "block:5"
+        ],
+        "blockSpan": 226,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes17.dex:Lcom/tencent/mm/plugin/ball/view/ContentFloatBallCollapseView;->a",
+          "classes17.dex:Ltu1/b;->y"
+        ],
+        "dexCallsites3220": [
+          "classes15.dex:Lcom/tencent/mm/plugin/ball/view/ContentFloatBallCollapseView;->a",
+          "classes15.dex:Llv1/b;->y"
+        ]
+      },
+      {
+        "source": "color/am3",
+        "baseline3200": "color/an4",
+        "target": "color/an5",
+        "baselineRid": "0x7f060999",
+        "targetRid": "0x7f060991",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "xml-slots:1",
+          "block:5"
+        ],
+        "blockSpan": 138,
+        "xmlSlotVotes": {
+          "color/an5": 1
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/am5",
+        "baseline3200": "color/an6",
+        "target": "color/an7",
+        "baselineRid": "0x7f0609c2",
+        "targetRid": "0x7f0609ba",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "block:5"
+        ],
+        "blockSpan": 138,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/amr",
+        "baseline3200": "color/ans",
+        "target": "color/ant",
+        "baselineRid": "0x7f060a75",
+        "targetRid": "0x7f060a5e",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "block:2"
+        ],
+        "blockSpan": 53,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/an4",
+        "baseline3200": "color/ao5",
+        "target": "color/ao7",
+        "baselineRid": "0x7f060a97",
+        "targetRid": "0x7f060a80",
+        "candidateCount": 2,
+        "reasons": [
+          "block-unique:5"
+        ],
+        "blockSpan": 180,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 2,
+        "xmlRefs3220Count": 2,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/ao8",
+        "baseline3200": "color/apf",
+        "target": "color/aph",
+        "baselineRid": "0x7f060bd1",
+        "targetRid": "0x7f060bba",
+        "candidateCount": 17,
+        "reasons": [
+          "block-unique:5"
+        ],
+        "blockSpan": 75,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes11.dex:Lzz4/k;->onBindViewHolder"
+        ],
+        "dexCallsites3220": [
+          "classes11.dex:Lwz4/k;->onBindViewHolder"
+        ]
+      },
+      {
+        "source": "color/b",
+        "baseline3200": "color/b",
+        "target": "color/b",
+        "baselineRid": "0x7f06000a",
+        "targetRid": "0x7f06000a",
+        "candidateCount": 2,
+        "reasons": [
+          "xml-slots-unique:107"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {
+          "color/b": 107
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 245,
+        "xmlRefs3220Count": 237,
+        "arscRefs3200Count": 5,
+        "arscRefs3220Count": 5,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/b_",
+        "baseline3200": "color/b_",
+        "target": "color/b_",
+        "baselineRid": "0x7f0602ad",
+        "targetRid": "0x7f0602ae",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "block:5"
+        ],
+        "blockSpan": 78,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 4,
+        "arscRefs3220Count": 4,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/bb",
+        "baseline3200": "color/bb",
+        "target": "color/bb",
+        "baselineRid": "0x7f0602af",
+        "targetRid": "0x7f0602b0",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "block:5"
+        ],
+        "blockSpan": 78,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes16.dex:Landroidx/appcompat/widget/h0;->k"
+        ],
+        "dexCallsites3220": [
+          "classes14.dex:Landroidx/appcompat/widget/h0;->k"
+        ]
+      },
+      {
+        "source": "color/c",
+        "baseline3200": "color/c",
+        "target": "color/c",
+        "baselineRid": "0x7f06000c",
+        "targetRid": "0x7f06000c",
+        "candidateCount": 3,
+        "reasons": [
+          "xml-slots-unique:263"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {
+          "color/c": 263
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 489,
+        "xmlRefs3220Count": 491,
+        "arscRefs3200Count": 13,
+        "arscRefs3220Count": 13,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/d",
+        "baseline3200": "color/d",
+        "target": "color/d",
+        "baselineRid": "0x7f06000e",
+        "targetRid": "0x7f06000e",
+        "candidateCount": 2,
+        "reasons": [
+          "xml-slots-unique:58"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {
+          "color/d": 58
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 114,
+        "xmlRefs3220Count": 115,
+        "arscRefs3200Count": 5,
+        "arscRefs3220Count": 5,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/e",
+        "baseline3200": "color/e",
+        "target": "color/e",
+        "baselineRid": "0x7f060011",
+        "targetRid": "0x7f060011",
+        "candidateCount": 2,
+        "reasons": [
+          "xml-slots-unique:11"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {
+          "color/e": 11
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 22,
+        "xmlRefs3220Count": 22,
+        "arscRefs3200Count": 1,
+        "arscRefs3220Count": 1,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/f",
+        "baseline3200": "color/f",
+        "target": "color/f",
+        "baselineRid": "0x7f060013",
+        "targetRid": "0x7f060013",
+        "candidateCount": 3,
+        "reasons": [
+          "xml-slots-unique:104"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {
+          "color/f": 104
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 242,
+        "xmlRefs3220Count": 242,
+        "arscRefs3200Count": 2,
+        "arscRefs3220Count": 2,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/g",
+        "baseline3200": "color/g",
+        "target": "color/g",
+        "baselineRid": "0x7f06006a",
+        "targetRid": "0x7f06006a",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "xml-slots:9",
+          "block:5"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {
+          "color/g": 9
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 11,
+        "xmlRefs3220Count": 10,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/h",
+        "baseline3200": "color/h",
+        "target": "color/h",
+        "baselineRid": "0x7f06007d",
+        "targetRid": "0x7f06007d",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "block:5"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/i",
+        "baseline3200": "color/i",
+        "target": "color/i",
+        "baselineRid": "0x7f06007e",
+        "targetRid": "0x7f06007e",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "xml-slots:1",
+          "block:5"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {
+          "color/i": 1
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 5,
+        "xmlRefs3220Count": 4,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/j",
+        "baseline3200": "color/agd",
+        "target": "color/agd",
+        "baselineRid": "0x7f0600ae",
+        "targetRid": "0x7f0600ae",
+        "candidateCount": 6,
+        "reasons": [
+          "block-unique:5"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 1,
+        "arscRefs3220Count": 1,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/jv",
+        "baseline3200": "color/jv",
+        "target": "color/jv",
+        "baselineRid": "0x7f0604ac",
+        "targetRid": "0x7f0604aa",
+        "candidateCount": 23,
+        "reasons": [
+          "block-unique:5"
+        ],
+        "blockSpan": 455,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes12.dex:Lcom/tencent/mm/plugin/ipcall/ui/DialNumberButton;->setInTalkUIMode"
+        ],
+        "dexCallsites3220": [
+          "classes4.dex:Lcom/tencent/mm/plugin/ipcall/ui/DialNumberButton;->setInTalkUIMode"
+        ]
+      },
+      {
+        "source": "color/jw",
+        "baseline3200": "color/jw",
+        "target": "color/jw",
+        "baselineRid": "0x7f0604ad",
+        "targetRid": "0x7f0604ab",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "xml-slots:2",
+          "block:5"
+        ],
+        "blockSpan": 455,
+        "xmlSlotVotes": {
+          "color/jw": 2
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 2,
+        "xmlRefs3220Count": 2,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/jz",
+        "baseline3200": "color/jz",
+        "target": "color/jz",
+        "baselineRid": "0x7f0604b1",
+        "targetRid": "0x7f0604af",
+        "candidateCount": 2,
+        "reasons": [
+          "xml-slots-unique:1"
+        ],
+        "blockSpan": 455,
+        "xmlSlotVotes": {
+          "color/jz": 1
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/k",
+        "baseline3200": "color/k",
+        "target": "color/k",
+        "baselineRid": "0x7f060080",
+        "targetRid": "0x7f060080",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "xml-slots:6",
+          "block:5"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {
+          "color/k": 6
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 8,
+        "xmlRefs3220Count": 8,
+        "arscRefs3200Count": 1,
+        "arscRefs3220Count": 1,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/k3",
+        "baseline3200": "color/k3",
+        "target": "color/k3",
+        "baselineRid": "0x7f0604b6",
+        "targetRid": "0x7f0604b4",
+        "candidateCount": 17,
+        "reasons": [
+          "xml-slots-unique:7"
+        ],
+        "blockSpan": 455,
+        "xmlSlotVotes": {
+          "color/k3": 7
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 11,
+        "xmlRefs3220Count": 11,
+        "arscRefs3200Count": 1,
+        "arscRefs3220Count": 1,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/k4",
+        "baseline3200": "color/k4",
+        "target": "color/k4",
+        "baselineRid": "0x7f0604bb",
+        "targetRid": "0x7f0604b9",
+        "candidateCount": 4,
+        "reasons": [
+          "xml-slots-unique:3"
+        ],
+        "blockSpan": 455,
+        "xmlSlotVotes": {
+          "color/k4": 3
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 6,
+        "xmlRefs3220Count": 7,
+        "arscRefs3200Count": 2,
+        "arscRefs3220Count": 2,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/k7",
+        "baseline3200": "color/k7",
+        "target": "color/k7",
+        "baselineRid": "0x7f0604c0",
+        "targetRid": "0x7f0604be",
+        "candidateCount": 17,
+        "reasons": [
+          "xml-slots-unique:17"
+        ],
+        "blockSpan": 455,
+        "xmlSlotVotes": {
+          "color/k7": 17
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 21,
+        "xmlRefs3220Count": 20,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/ke",
+        "baseline3200": "color/ke",
+        "target": "color/ke",
+        "baselineRid": "0x7f0604de",
+        "targetRid": "0x7f0604dc",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "block:5"
+        ],
+        "blockSpan": 455,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 1,
+        "arscRefs3220Count": 1,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/kf",
+        "baseline3200": "color/kf",
+        "target": "color/kf",
+        "baselineRid": "0x7f0604df",
+        "targetRid": "0x7f0604dd",
+        "candidateCount": 31,
+        "reasons": [
+          "block-unique:5"
+        ],
+        "blockSpan": 455,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes14.dex:Lcom/tencent/mm/plugin/emojicapture/ui/editor/EditorItemContainer;-><init>"
+        ],
+        "dexCallsites3220": [
+          "classes10.dex:Lcom/tencent/mm/plugin/emojicapture/ui/editor/EditorItemContainer;-><init>"
+        ]
+      },
+      {
+        "source": "color/kg",
+        "baseline3200": "color/kg",
+        "target": "color/kg",
+        "baselineRid": "0x7f0604e1",
+        "targetRid": "0x7f0604df",
+        "candidateCount": 12,
+        "reasons": [
+          "block-unique:5"
+        ],
+        "blockSpan": 455,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/kh",
+        "baseline3200": "color/kh",
+        "target": "color/kh",
+        "baselineRid": "0x7f0604e2",
+        "targetRid": "0x7f0604e0",
+        "candidateCount": 2,
+        "reasons": [
+          "block-unique:5"
+        ],
+        "blockSpan": 455,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/kj",
+        "baseline3200": "color/kj",
+        "target": "color/kj",
+        "baselineRid": "0x7f0601ed",
+        "targetRid": "0x7f0601ed",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "xml-slots:9",
+          "block:5"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {
+          "color/kj": 9
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 20,
+        "xmlRefs3220Count": 20,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/kp",
+        "baseline3200": "color/kp",
+        "target": "color/kp",
+        "baselineRid": "0x7f0604ef",
+        "targetRid": "0x7f0604ed",
+        "candidateCount": 2,
+        "reasons": [
+          "xml-slots-unique:1"
+        ],
+        "blockSpan": 455,
+        "xmlSlotVotes": {
+          "color/kp": 1
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 3,
+        "xmlRefs3220Count": 3,
+        "arscRefs3200Count": 2,
+        "arscRefs3220Count": 2,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/l",
+        "baseline3200": "color/l",
+        "target": "color/l",
+        "baselineRid": "0x7f060081",
+        "targetRid": "0x7f060081",
+        "candidateCount": 2,
+        "reasons": [
+          "xml-slots-unique:3"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {
+          "color/l": 3
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 3,
+        "xmlRefs3220Count": 3,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/m",
+        "baseline3200": "color/m",
+        "target": "color/m",
+        "baselineRid": "0x7f060083",
+        "targetRid": "0x7f060083",
+        "candidateCount": 17,
+        "reasons": [
+          "xml-slots-unique:175"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {
+          "color/m": 175
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 274,
+        "xmlRefs3220Count": 266,
+        "arscRefs3200Count": 13,
+        "arscRefs3220Count": 13,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/mr",
+        "baseline3200": "color/mr",
+        "target": "color/mr",
+        "baselineRid": "0x7f06057b",
+        "targetRid": "0x7f06057a",
+        "candidateCount": 6,
+        "reasons": [
+          "block-unique:5"
+        ],
+        "blockSpan": 90,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes2.dex:Lbj2/u;->a",
+          "classes2.dex:Lh03/s0;->Ej",
+          "classes2.dex:Lh03/s0;->Rj",
+          "classes2.dex:Lim2/q9;->T7",
+          "classes2.dex:Lcom/tencent/mm/plugin/finder/convert/oe;->C1",
+          "classes2.dex:Lcom/tencent/mm/plugin/finder/convert/oe;->M1"
+        ],
+        "dexCallsites3220": [
+          "classes2.dex:Lsj2/u;->a",
+          "classes2.dex:Ly03/s0;->Kj",
+          "classes2.dex:Ly03/s0;->Xj",
+          "classes2.dex:Lym2/s9;->U7",
+          "classes2.dex:Lcom/tencent/mm/plugin/finder/convert/ne;->F1",
+          "classes2.dex:Lcom/tencent/mm/plugin/finder/convert/ne;->P1"
+        ]
+      },
+      {
+        "source": "color/ms",
+        "baseline3200": "color/ms",
+        "target": "color/ms",
+        "baselineRid": "0x7f06057e",
+        "targetRid": "0x7f06057d",
+        "candidateCount": 2,
+        "reasons": [
+          "xml-slots-unique:4"
+        ],
+        "blockSpan": 90,
+        "xmlSlotVotes": {
+          "color/ms": 4
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 4,
+        "xmlRefs3220Count": 4,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/mv",
+        "baseline3200": "color/mv",
+        "target": "color/mv",
+        "baselineRid": "0x7f060589",
+        "targetRid": "0x7f060588",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "xml-slots:4",
+          "block:5"
+        ],
+        "blockSpan": 90,
+        "xmlSlotVotes": {
+          "color/mv": 4
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 4,
+        "xmlRefs3220Count": 4,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/mw",
+        "baseline3200": "color/mw",
+        "target": "color/mw",
+        "baselineRid": "0x7f06058a",
+        "targetRid": "0x7f060589",
+        "candidateCount": 2,
+        "reasons": [
+          "block-unique:5"
+        ],
+        "blockSpan": 90,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 2,
+        "xmlRefs3220Count": 2,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/n",
+        "baseline3200": "color/n",
+        "target": "color/n",
+        "baselineRid": "0x7f06009b",
+        "targetRid": "0x7f06009b",
+        "candidateCount": 2,
+        "reasons": [
+          "xml-slots-unique:2"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {
+          "color/n": 2
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 4,
+        "xmlRefs3220Count": 4,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/n0",
+        "baseline3200": "color/n0",
+        "target": "color/n0",
+        "baselineRid": "0x7f06058f",
+        "targetRid": "0x7f06058e",
+        "candidateCount": 2,
+        "reasons": [
+          "xml-slots-unique:1"
+        ],
+        "blockSpan": 90,
+        "xmlSlotVotes": {
+          "color/n0": 1
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/n1",
+        "baseline3200": "color/n1",
+        "target": "color/n1",
+        "baselineRid": "0x7f060590",
+        "targetRid": "0x7f06058f",
+        "candidateCount": 8,
+        "reasons": [
+          "block-unique:5"
+        ],
+        "blockSpan": 90,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes2.dex:Lcom/tencent/mm/plugin/finder/convert/q6;-><clinit>",
+          "classes2.dex:Lcom/tencent/mm/plugin/finder/convert/q6;->y",
+          "classes9.dex:Lz23/n;->e"
+        ],
+        "dexCallsites3220": [
+          "classes10.dex:Lp33/n;->e",
+          "classes2.dex:Lcom/tencent/mm/plugin/finder/convert/q6;-><clinit>",
+          "classes2.dex:Lcom/tencent/mm/plugin/finder/convert/q6;->y"
+        ]
+      },
+      {
+        "source": "color/n5",
+        "baseline3200": "color/n5",
+        "target": "color/n5",
+        "baselineRid": "0x7f060597",
+        "targetRid": "0x7f060596",
+        "candidateCount": 7,
+        "reasons": [
+          "block-unique:5"
+        ],
+        "blockSpan": 90,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes.dex:Lcom/tencent/mm/plugin/finder/view/tt;->h",
+          "classes3.dex:Lgl2/d20;->X7"
+        ],
+        "dexCallsites3220": [
+          "classes2.dex:Lcom/tencent/mm/plugin/finder/view/wt;->h",
+          "classes4.dex:Lwl2/k30;->Z7"
+        ]
+      },
+      {
+        "source": "color/n8",
+        "baseline3200": "color/n8",
+        "target": "color/n8",
+        "baselineRid": "0x7f06059b",
+        "targetRid": "0x7f06059a",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "xml-slots:1",
+          "block:5"
+        ],
+        "blockSpan": 90,
+        "xmlSlotVotes": {
+          "color/n8": 1
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/n_",
+        "baseline3200": "color/n_",
+        "target": "color/n_",
+        "baselineRid": "0x7f06059e",
+        "targetRid": "0x7f06059d",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "block:5"
+        ],
+        "blockSpan": 90,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes3.dex:Lzs2/c;->c"
+        ],
+        "dexCallsites3220": [
+          "classes4.dex:Lqt2/c;->c"
+        ]
+      },
+      {
+        "source": "color/nb",
+        "baseline3200": "color/nb",
+        "target": "color/nb",
+        "baselineRid": "0x7f0605a0",
+        "targetRid": "0x7f06059f",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "xml-slots:2",
+          "block:5"
+        ],
+        "blockSpan": 90,
+        "xmlSlotVotes": {
+          "color/nb": 2
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 2,
+        "xmlRefs3220Count": 2,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/ni",
+        "baseline3200": "color/ni",
+        "target": "color/ni",
+        "baselineRid": "0x7f0605a7",
+        "targetRid": "0x7f0605a6",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "xml-slots:1",
+          "block:5"
+        ],
+        "blockSpan": 90,
+        "xmlSlotVotes": {
+          "color/ni": 1
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/no",
+        "baseline3200": "color/no",
+        "target": "color/no",
+        "baselineRid": "0x7f0605ad",
+        "targetRid": "0x7f0605ac",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "xml-slots:1",
+          "block:5"
+        ],
+        "blockSpan": 90,
+        "xmlSlotVotes": {
+          "color/no": 1
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/nq",
+        "baseline3200": "color/nq",
+        "target": "color/nq",
+        "baselineRid": "0x7f0605af",
+        "targetRid": "0x7f0605ae",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "xml-slots:1",
+          "block:5"
+        ],
+        "blockSpan": 90,
+        "xmlSlotVotes": {
+          "color/nq": 1
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/o",
+        "baseline3200": "color/o",
+        "target": "color/o",
+        "baselineRid": "0x7f0600b7",
+        "targetRid": "0x7f0600b7",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "xml-slots:2",
+          "block:5"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {
+          "color/o": 2
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 2,
+        "xmlRefs3220Count": 2,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/on",
+        "baseline3200": "color/on",
+        "target": "color/on",
+        "baselineRid": "0x7f0605e3",
+        "targetRid": "0x7f0605e2",
+        "candidateCount": 17,
+        "reasons": [
+          "xml-slots-unique:4"
+        ],
+        "blockSpan": 23,
+        "xmlSlotVotes": {
+          "color/on": 4
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 7,
+        "xmlRefs3220Count": 7,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/ou",
+        "baseline3200": "color/ou",
+        "target": "color/ou",
+        "baselineRid": "0x7f060328",
+        "targetRid": "0x7f060326",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "xml-slots:1",
+          "block:5"
+        ],
+        "blockSpan": 455,
+        "xmlSlotVotes": {
+          "color/ou": 1
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/ov",
+        "baseline3200": "color/ov",
+        "target": "color/ov",
+        "baselineRid": "0x7f060301",
+        "targetRid": "0x7f0602ff",
+        "candidateCount": 11,
+        "reasons": [
+          "block-unique:5"
+        ],
+        "blockSpan": 455,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes7.dex:Lcom/tencent/mm/plugin/appbrand/widget/actionbar/AppBrandTranslateLayout;->setStyleColor",
+          "classes7.dex:Lcom/tencent/mm/plugin/appbrand/page/capsulebar/AppBrandCapsuleBarImplView;->setStyleColor"
+        ],
+        "dexCallsites3220": [
+          "classes7.dex:Lcom/tencent/mm/plugin/appbrand/widget/actionbar/AppBrandTranslateLayout;->setStyleColor",
+          "classes7.dex:Lcom/tencent/mm/plugin/appbrand/page/capsulebar/AppBrandCapsuleBarImplView;->setStyleColor"
+        ]
+      },
+      {
+        "source": "color/p",
+        "baseline3200": "color/p",
+        "target": "color/p",
+        "baselineRid": "0x7f0600b8",
+        "targetRid": "0x7f0600b8",
+        "candidateCount": 3,
+        "reasons": [
+          "xml-slots-unique:2"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {
+          "color/p": 2
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 2,
+        "xmlRefs3220Count": 2,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/q6",
+        "baseline3200": "color/q6",
+        "target": "color/q6",
+        "baselineRid": "0x7f06065f",
+        "targetRid": "0x7f06065f",
+        "candidateCount": 11,
+        "reasons": [
+          "xml-slots-unique:8"
+        ],
+        "blockSpan": 226,
+        "xmlSlotVotes": {
+          "color/q6": 8
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 8,
+        "xmlRefs3220Count": 8,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/qy",
+        "baseline3200": "color/qy",
+        "target": "color/qy",
+        "baselineRid": "0x7f0606ae",
+        "targetRid": "0x7f0606ae",
+        "candidateCount": 23,
+        "reasons": [
+          "block-unique:5"
+        ],
+        "blockSpan": 226,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/qz",
+        "baseline3200": "color/qz",
+        "target": "color/qz",
+        "baselineRid": "0x7f0606af",
+        "targetRid": "0x7f0606af",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "block:5"
+        ],
+        "blockSpan": 226,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/r",
+        "baseline3200": "color/r",
+        "target": "color/r",
+        "baselineRid": "0x7f0600ba",
+        "targetRid": "0x7f0600ba",
+        "candidateCount": 3,
+        "reasons": [
+          "block-unique:5"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 4,
+        "xmlRefs3220Count": 4,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/s",
+        "baseline3200": "color/s",
+        "target": "color/s",
+        "baselineRid": "0x7f0600c5",
+        "targetRid": "0x7f0600c5",
+        "candidateCount": 9,
+        "reasons": [
+          "block-unique:5"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/s1",
+        "baseline3200": "color/s1",
+        "target": "color/s1",
+        "baselineRid": "0x7f0606f9",
+        "targetRid": "0x7f0606f9",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "xml-slots:2",
+          "block:5"
+        ],
+        "blockSpan": 226,
+        "xmlSlotVotes": {
+          "color/s1": 2
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 2,
+        "xmlRefs3220Count": 2,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/s2",
+        "baseline3200": "color/s2",
+        "target": "color/s2",
+        "baselineRid": "0x7f0606fa",
+        "targetRid": "0x7f0606fa",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "xml-slots:2",
+          "block:5"
+        ],
+        "blockSpan": 226,
+        "xmlSlotVotes": {
+          "color/s2": 2
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 2,
+        "xmlRefs3220Count": 2,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/s7",
+        "baseline3200": "color/s7",
+        "target": "color/s7",
+        "baselineRid": "0x7f060700",
+        "targetRid": "0x7f060700",
+        "candidateCount": 4,
+        "reasons": [
+          "xml-slots-unique:1"
+        ],
+        "blockSpan": 226,
+        "xmlSlotVotes": {
+          "color/s7": 1
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/s8",
+        "baseline3200": "color/s8",
+        "target": "color/s8",
+        "baselineRid": "0x7f060702",
+        "targetRid": "0x7f060702",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "block:5"
+        ],
+        "blockSpan": 226,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes5.dex:Lcom/tencent/mm/plugin/game/ui/message/f0;->onBindViewHolder",
+          "classes5.dex:Lcom/tencent/mm/plugin/game/ui/message/j0;->a",
+          "classes5.dex:Lcom/tencent/mm/plugin/game/ui/message/k0;->a"
+        ],
+        "dexCallsites3220": [
+          "classes8.dex:Lcom/tencent/mm/plugin/game/ui/message/f0;->onBindViewHolder",
+          "classes8.dex:Lcom/tencent/mm/plugin/game/ui/message/j0;->a",
+          "classes8.dex:Lcom/tencent/mm/plugin/game/ui/message/k0;->a"
+        ]
+      },
+      {
+        "source": "color/s_",
+        "baseline3200": "color/s_",
+        "target": "color/s_",
+        "baselineRid": "0x7f060704",
+        "targetRid": "0x7f060704",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "xml-slots:1",
+          "block:5"
+        ],
+        "blockSpan": 226,
+        "xmlSlotVotes": {
+          "color/s_": 1
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/sg",
+        "baseline3200": "color/sg",
+        "target": "color/sg",
+        "baselineRid": "0x7f06070c",
+        "targetRid": "0x7f06070c",
+        "candidateCount": 4,
+        "reasons": [
+          "xml-slots-unique:14"
+        ],
+        "blockSpan": 226,
+        "xmlSlotVotes": {
+          "color/sg": 14
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 14,
+        "xmlRefs3220Count": 14,
+        "arscRefs3200Count": 1,
+        "arscRefs3220Count": 1,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/sl",
+        "baseline3200": "color/sl",
+        "target": "color/sl",
+        "baselineRid": "0x7f060712",
+        "targetRid": "0x7f060712",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "xml-slots:1",
+          "block:5"
+        ],
+        "blockSpan": 226,
+        "xmlSlotVotes": {
+          "color/sl": 1
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/sr",
+        "baseline3200": "color/sr",
+        "target": "color/sr",
+        "baselineRid": "0x7f060720",
+        "targetRid": "0x7f060720",
+        "candidateCount": 5,
+        "reasons": [
+          "block-unique:5"
+        ],
+        "blockSpan": 226,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 1,
+        "arscRefs3220Count": 1,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/t",
+        "baseline3200": "color/t",
+        "target": "color/t",
+        "baselineRid": "0x7f0600c6",
+        "targetRid": "0x7f0600c6",
+        "candidateCount": 8,
+        "reasons": [
+          "xml-slots-unique:26"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {
+          "color/t": 26
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 36,
+        "xmlRefs3220Count": 36,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/ta",
+        "baseline3200": "color/ta",
+        "target": "color/ta",
+        "baselineRid": "0x7f06073f",
+        "targetRid": "0x7f06073d",
+        "candidateCount": 7,
+        "reasons": [
+          "xml-slots-unique:20"
+        ],
+        "blockSpan": 13,
+        "xmlSlotVotes": {
+          "color/ta": 20
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 23,
+        "xmlRefs3220Count": 22,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/tt",
+        "baseline3200": "color/tt",
+        "target": "color/tt",
+        "baselineRid": "0x7f060755",
+        "targetRid": "0x7f060753",
+        "candidateCount": 7,
+        "reasons": [
+          "xml-slots-unique:2"
+        ],
+        "blockSpan": 97,
+        "xmlSlotVotes": {
+          "color/tt": 2
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 2,
+        "xmlRefs3220Count": 2,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/tv",
+        "baseline3200": "color/tv",
+        "target": "color/tv",
+        "baselineRid": "0x7f060758",
+        "targetRid": "0x7f060756",
+        "candidateCount": 11,
+        "reasons": [
+          "xml-slots-unique:4"
+        ],
+        "blockSpan": 97,
+        "xmlSlotVotes": {
+          "color/tv": 4
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 5,
+        "xmlRefs3220Count": 5,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/tw",
+        "baseline3200": "color/tw",
+        "target": "color/tw",
+        "baselineRid": "0x7f0600b5",
+        "targetRid": "0x7f0600b5",
+        "candidateCount": 6,
+        "reasons": [
+          "xml-slots-unique:6"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {
+          "color/tw": 6
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 6,
+        "xmlRefs3220Count": 6,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/u6",
+        "baseline3200": "color/u6",
+        "target": "color/u6",
+        "baselineRid": "0x7f060765",
+        "targetRid": "0x7f060763",
+        "candidateCount": 26,
+        "reasons": [
+          "xml-slots-unique:75"
+        ],
+        "blockSpan": 97,
+        "xmlSlotVotes": {
+          "color/u6": 75
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 122,
+        "xmlRefs3220Count": 122,
+        "arscRefs3200Count": 1,
+        "arscRefs3220Count": 1,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/ub",
+        "baseline3200": "color/ub",
+        "target": "color/ub",
+        "baselineRid": "0x7f06076c",
+        "targetRid": "0x7f06076a",
+        "candidateCount": 6,
+        "reasons": [
+          "block-unique:5"
+        ],
+        "blockSpan": 97,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/up",
+        "baseline3200": "color/up",
+        "target": "color/up",
+        "baselineRid": "0x7f060789",
+        "targetRid": "0x7f060787",
+        "candidateCount": 4,
+        "reasons": [
+          "block-unique:5"
+        ],
+        "blockSpan": 97,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes10.dex:Lsw5/f1;->B",
+          "classes10.dex:Lsw5/i1;->d"
+        ],
+        "dexCallsites3220": [
+          "classes14.dex:Lmw5/i1;->d",
+          "classes14.dex:Lmw5/f1;->C"
+        ]
+      },
+      {
+        "source": "color/uv",
+        "baseline3200": "color/uv",
+        "target": "color/uv",
+        "baselineRid": "0x7f060796",
+        "targetRid": "0x7f060794",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "xml-slots:1",
+          "block:5"
+        ],
+        "blockSpan": 97,
+        "xmlSlotVotes": {
+          "color/uv": 1
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/ux",
+        "baseline3200": "color/ux",
+        "target": "color/ux",
+        "baselineRid": "0x7f060799",
+        "targetRid": "0x7f060797",
+        "candidateCount": 32,
+        "reasons": [
+          "block-unique:5"
+        ],
+        "blockSpan": 97,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes8.dex:Lcom/tencent/mm/plugin/ipcall/ui/q2;->getView"
+        ],
+        "dexCallsites3220": [
+          "classes6.dex:Lcom/tencent/mm/plugin/ipcall/ui/q2;->getView"
+        ]
+      },
+      {
+        "source": "color/vf",
+        "baseline3200": "color/vf",
+        "target": "color/vf",
+        "baselineRid": "0x7f0607af",
+        "targetRid": "0x7f0607ad",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "xml-slots:2",
+          "block:5"
+        ],
+        "blockSpan": 97,
+        "xmlSlotVotes": {
+          "color/vf": 2
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 2,
+        "xmlRefs3220Count": 2,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/vk",
+        "baseline3200": "color/vk",
+        "target": "color/vk",
+        "baselineRid": "0x7f0607b4",
+        "targetRid": "0x7f0607b2",
+        "candidateCount": 20,
+        "reasons": [
+          "xml-slots-unique:12"
+        ],
+        "blockSpan": 97,
+        "xmlSlotVotes": {
+          "color/vk": 12
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 12,
+        "xmlRefs3220Count": 12,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/vm",
+        "baseline3200": "color/vm",
+        "target": "color/vm",
+        "baselineRid": "0x7f0607b7",
+        "targetRid": "0x7f0607b5",
+        "candidateCount": 18,
+        "reasons": [
+          "xml-slots-unique:21"
+        ],
+        "blockSpan": 97,
+        "xmlSlotVotes": {
+          "color/vm": 21
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 24,
+        "xmlRefs3220Count": 21,
+        "arscRefs3200Count": 1,
+        "arscRefs3220Count": 1,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/vo",
+        "baseline3200": "color/vo",
+        "target": "color/vo",
+        "baselineRid": "0x7f0607ba",
+        "targetRid": "0x7f0607b8",
+        "candidateCount": 4,
+        "reasons": [
+          "xml-slots-unique:95"
+        ],
+        "blockSpan": 97,
+        "xmlSlotVotes": {
+          "color/vo": 95
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 143,
+        "xmlRefs3220Count": 130,
+        "arscRefs3200Count": 5,
+        "arscRefs3220Count": 5,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/xa",
+        "baseline3200": "color/xa",
+        "target": "color/xa",
+        "baselineRid": "0x7f060808",
+        "targetRid": "0x7f060806",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "xml-slots:4",
+          "block:5"
+        ],
+        "blockSpan": 98,
+        "xmlSlotVotes": {
+          "color/xa": 4
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 4,
+        "xmlRefs3220Count": 4,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/xb",
+        "baseline3200": "color/xb",
+        "target": "color/xb",
+        "baselineRid": "0x7f060809",
+        "targetRid": "0x7f060807",
+        "candidateCount": 9,
+        "reasons": [
+          "xml-slots-unique:4"
+        ],
+        "blockSpan": 98,
+        "xmlSlotVotes": {
+          "color/xb": 4
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 7,
+        "xmlRefs3220Count": 7,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/xg",
+        "baseline3200": "color/xg",
+        "target": "color/xg",
+        "baselineRid": "0x7f060810",
+        "targetRid": "0x7f06080e",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "block:5"
+        ],
+        "blockSpan": 98,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/xi",
+        "baseline3200": "color/xi",
+        "target": "color/xi",
+        "baselineRid": "0x7f060812",
+        "targetRid": "0x7f060810",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "block:5"
+        ],
+        "blockSpan": 98,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes14.dex:Lcom/tencent/mm/plugin/luckymoney/ui/LuckyMoneyNewYearSendUI;->B7"
+        ],
+        "dexCallsites3220": [
+          "classes13.dex:Lcom/tencent/mm/plugin/luckymoney/ui/LuckyMoneyNewYearSendUI;->M7"
+        ]
+      },
+      {
+        "source": "color/xj",
+        "baseline3200": "color/xj",
+        "target": "color/xj",
+        "baselineRid": "0x7f060813",
+        "targetRid": "0x7f060811",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "block:5"
+        ],
+        "blockSpan": 98,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes14.dex:Lcom/tencent/mm/plugin/luckymoney/ui/LuckyMoneyPrepareUI$38$1;->onCreateMMMenu",
+          "classes14.dex:Lcom/tencent/mm/plugin/luckymoney/ui/ec;->onCreateMMMenu",
+          "classes14.dex:Lcom/tencent/mm/plugin/luckymoney/ui/q1;->onCreateMMMenu",
+          "classes14.dex:Lcom/tencent/mm/plugin/luckymoney/ui/u8;->onCreateMMMenu"
+        ],
+        "dexCallsites3220": [
+          "classes13.dex:Lcom/tencent/mm/plugin/luckymoney/ui/LuckyMoneyPrepareUI$38$1;->onCreateMMMenu",
+          "classes13.dex:Lcom/tencent/mm/plugin/luckymoney/ui/ec;->onCreateMMMenu",
+          "classes13.dex:Lcom/tencent/mm/plugin/luckymoney/ui/q1;->onCreateMMMenu",
+          "classes13.dex:Lcom/tencent/mm/plugin/luckymoney/ui/u8;->onCreateMMMenu"
+        ]
+      },
+      {
+        "source": "color/xl",
+        "baseline3200": "color/xl",
+        "target": "color/xl",
+        "baselineRid": "0x7f060815",
+        "targetRid": "0x7f060813",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "xml-slots:1",
+          "block:5"
+        ],
+        "blockSpan": 98,
+        "xmlSlotVotes": {
+          "color/xl": 1
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/xr",
+        "baseline3200": "color/xr",
+        "target": "color/xr",
+        "baselineRid": "0x7f060822",
+        "targetRid": "0x7f060820",
+        "candidateCount": 5,
+        "reasons": [
+          "xml-slots-unique:2"
+        ],
+        "blockSpan": 98,
+        "xmlSlotVotes": {
+          "color/xr": 2
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 2,
+        "xmlRefs3220Count": 2,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/xw",
+        "baseline3200": "color/xw",
+        "target": "color/xw",
+        "baselineRid": "0x7f060828",
+        "targetRid": "0x7f060826",
+        "candidateCount": 31,
+        "reasons": [
+          "xml-slots-unique:11"
+        ],
+        "blockSpan": 98,
+        "xmlSlotVotes": {
+          "color/xw": 11
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 11,
+        "xmlRefs3220Count": 11,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/xy",
+        "baseline3200": "color/xy",
+        "target": "color/xy",
+        "baselineRid": "0x7f06082a",
+        "targetRid": "0x7f060828",
+        "candidateCount": 8,
+        "reasons": [
+          "xml-slots-unique:8"
+        ],
+        "blockSpan": 98,
+        "xmlSlotVotes": {
+          "color/xy": 8
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 8,
+        "xmlRefs3220Count": 8,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/xz",
+        "baseline3200": "color/xz",
+        "target": "color/xz",
+        "baselineRid": "0x7f06082b",
+        "targetRid": "0x7f060829",
+        "candidateCount": 31,
+        "reasons": [
+          "xml-slots-unique:4"
+        ],
+        "blockSpan": 98,
+        "xmlSlotVotes": {
+          "color/xz": 4
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 4,
+        "xmlRefs3220Count": 4,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/y1",
+        "baseline3200": "color/y1",
+        "target": "color/y1",
+        "baselineRid": "0x7f06082d",
+        "targetRid": "0x7f06082b",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "xml-slots:1",
+          "block:5"
+        ],
+        "blockSpan": 98,
+        "xmlSlotVotes": {
+          "color/y1": 1
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/y2",
+        "baseline3200": "color/y2",
+        "target": "color/y2",
+        "baselineRid": "0x7f06082e",
+        "targetRid": "0x7f06082c",
+        "candidateCount": 17,
+        "reasons": [
+          "xml-slots-unique:3"
+        ],
+        "blockSpan": 98,
+        "xmlSlotVotes": {
+          "color/y2": 3
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 5,
+        "xmlRefs3220Count": 5,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/y4",
+        "baseline3200": "color/y4",
+        "target": "color/y4",
+        "baselineRid": "0x7f060831",
+        "targetRid": "0x7f06082f",
+        "candidateCount": 2,
+        "reasons": [
+          "xml-slots-unique:9"
+        ],
+        "blockSpan": 98,
+        "xmlSlotVotes": {
+          "color/y4": 9
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 10,
+        "xmlRefs3220Count": 10,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/yd",
+        "baseline3200": "color/yd",
+        "target": "color/yd",
+        "baselineRid": "0x7f0608b5",
+        "targetRid": "0x7f0608b3",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "block:5"
+        ],
+        "blockSpan": 45,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes3.dex:Lcom/tencent/mm/plugin/exdevice/ui/ColorfulCircleProgress;-><init>"
+        ],
+        "dexCallsites3220": [
+          "classes4.dex:Lcom/tencent/mm/plugin/exdevice/ui/ColorfulCircleProgress;-><init>"
+        ]
+      },
+      {
+        "source": "color/yl",
+        "baseline3200": "color/yl",
+        "target": "color/yl",
+        "baselineRid": "0x7f0608c0",
+        "targetRid": "0x7f0608be",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "block:5"
+        ],
+        "blockSpan": 45,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes11.dex:Li64/o;->h",
+          "classes11.dex:Lcom/tencent/mm/ui/contact/u0;->getView",
+          "classes11.dex:Lmu5/u;->getView",
+          "classes8.dex:Lcom/tencent/mm/ui/contact/vc;-><init>",
+          "classes8.dex:Lcom/tencent/mm/ui/contact/zb;-><init>"
+        ],
+        "dexCallsites3220": [
+          "classes11.dex:Lcom/tencent/mm/ui/contact/u0;->getView",
+          "classes11.dex:Lgu5/u;->getView",
+          "classes11.dex:Lm64/o;->h",
+          "classes4.dex:Lcom/tencent/mm/ui/contact/vc;-><init>",
+          "classes4.dex:Lcom/tencent/mm/ui/contact/zb;-><init>"
+        ]
+      },
+      {
+        "source": "color/yp",
+        "baseline3200": "color/yp",
+        "target": "color/yp",
+        "baselineRid": "0x7f0608c5",
+        "targetRid": "0x7f0608c3",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "block:3"
+        ],
+        "blockSpan": 45,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes5.dex:Lcom/tencent/mm/ui/tools/ld;-><init>"
+        ],
+        "dexCallsites3220": [
+          "classes6.dex:Lcom/tencent/mm/ui/tools/ld;-><init>"
+        ]
+      },
+      {
+        "source": "color/zf",
+        "baseline3200": "color/zf",
+        "target": "color/zf",
+        "baselineRid": "0x7f0608f9",
+        "targetRid": "0x7f0608f4",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "block:4"
+        ],
+        "blockSpan": 28,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/a2_",
+        "baseline3200": "color/a2_",
+        "target": "color/a2_",
+        "baselineRid": "0x7f0609a5",
+        "targetRid": "0x7f06099d",
+        "candidateCount": 4,
+        "reasons": [
+          "xml-slots-unique:1"
+        ],
+        "blockSpan": 138,
+        "xmlSlotVotes": {
+          "color/a2_": 1
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/a_w",
+        "baseline3200": "color/a_w",
+        "target": "color/a_w",
+        "baselineRid": "0x7f060bf4",
+        "targetRid": "0x7f060bdd",
+        "candidateCount": 5,
+        "reasons": [
+          "descriptive-name",
+          "block:3"
+        ],
+        "blockSpan": 10,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 4,
+        "xmlRefs3220Count": 4,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/agj",
+        "baseline3200": "color/agp",
+        "target": "color/agp",
+        "baselineRid": "0x7f0600ee",
+        "targetRid": "0x7f0600ee",
+        "candidateCount": 5,
+        "reasons": [
+          "xml-slots-unique:1"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {
+          "color/agp": 1
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/agp",
+        "baseline3200": "color/agv",
+        "target": "color/agv",
+        "baselineRid": "0x7f0600fd",
+        "targetRid": "0x7f0600fd",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "block:5"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 2,
+        "xmlRefs3220Count": 2,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/agq",
+        "baseline3200": "color/agw",
+        "target": "color/agw",
+        "baselineRid": "0x7f06012e",
+        "targetRid": "0x7f06012e",
+        "candidateCount": 5,
+        "reasons": [
+          "xml-slots-unique:1"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {
+          "color/agw": 1
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 2,
+        "xmlRefs3220Count": 2,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "drawable/a53",
+        "baseline3200": "drawable/a53",
+        "target": "drawable/a53",
+        "baselineRid": "0x7f080a32",
+        "targetRid": "0x7f080a35",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "xml-slots:9",
+          "block:5"
+        ],
+        "blockSpan": 290,
+        "xmlSlotVotes": {
+          "drawable/a53": 9
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 9,
+        "xmlRefs3220Count": 9,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "drawable/a54",
+        "baseline3200": "drawable/a54",
+        "target": "drawable/a54",
+        "baselineRid": "0x7f080a33",
+        "targetRid": "0x7f080a36",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "xml-slots:2",
+          "block:5"
+        ],
+        "blockSpan": 290,
+        "xmlSlotVotes": {
+          "drawable/a54": 2
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 2,
+        "xmlRefs3220Count": 2,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "drawable/a7s",
+        "baseline3200": "drawable/a7s",
+        "target": "drawable/a7s",
+        "baselineRid": "0x7f080add",
+        "targetRid": "0x7f080ae2",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "block:5"
+        ],
+        "blockSpan": 186,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes3.dex:Lcom/tencent/mm/plugin/finder/live/widget/mf;->g"
+        ],
+        "dexCallsites3220": [
+          "classes4.dex:Lcom/tencent/mm/plugin/finder/live/widget/qf;->g"
+        ]
+      },
+      {
+        "source": "drawable/a8o",
+        "baseline3200": "drawable/a8o",
+        "target": "drawable/a8o",
+        "baselineRid": "0x7f080b25",
+        "targetRid": "0x7f080b2a",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "xml-slots:2",
+          "block:5"
+        ],
+        "blockSpan": 186,
+        "xmlSlotVotes": {
+          "drawable/a8o": 2
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 2,
+        "xmlRefs3220Count": 2,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "drawable/b8d",
+        "baseline3200": "drawable/b8d",
+        "target": "drawable/b8d",
+        "baselineRid": "0x7f081775",
+        "targetRid": "0x7f08173e",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "xml-slots:6",
+          "block:5"
+        ],
+        "blockSpan": 168,
+        "xmlSlotVotes": {
+          "drawable/b8d": 6
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 14,
+        "xmlRefs3220Count": 12,
+        "arscRefs3200Count": 1,
+        "arscRefs3220Count": 1,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "drawable/b8e",
+        "baseline3200": "drawable/b8e",
+        "target": "drawable/b8e",
+        "baselineRid": "0x7f081776",
+        "targetRid": "0x7f08173f",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "xml-slots:6",
+          "block:5"
+        ],
+        "blockSpan": 168,
+        "xmlSlotVotes": {
+          "drawable/b8e": 6
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 34,
+        "xmlRefs3220Count": 34,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "drawable/b8f",
+        "baseline3200": "drawable/b8f",
+        "target": "drawable/b8f",
+        "baselineRid": "0x7f081777",
+        "targetRid": "0x7f081740",
+        "candidateCount": 2,
+        "reasons": [
+          "block-unique:5"
+        ],
+        "blockSpan": 168,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes9.dex:Lcom/tencent/mm/ui/tools/ud;->a",
+          "classes9.dex:Lcom/tencent/mm/ui/tools/ud;->b"
+        ],
+        "dexCallsites3220": [
+          "classes8.dex:Lcom/tencent/mm/ui/tools/ud;->a",
+          "classes8.dex:Lcom/tencent/mm/ui/tools/ud;->b"
+        ]
+      },
+      {
+        "source": "drawable/b8g",
+        "baseline3200": "drawable/b8g",
+        "target": "drawable/b8g",
+        "baselineRid": "0x7f081778",
+        "targetRid": "0x7f081741",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "block:5"
+        ],
+        "blockSpan": 168,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes9.dex:Lcom/tencent/mm/ui/tools/ud;->b"
+        ],
+        "dexCallsites3220": [
+          "classes8.dex:Lcom/tencent/mm/ui/tools/ud;->b"
+        ]
+      },
+      {
+        "source": "drawable/b8h",
+        "baseline3200": "drawable/b8h",
+        "target": "drawable/b8h",
+        "baselineRid": "0x7f081779",
+        "targetRid": "0x7f081742",
+        "candidateCount": 2,
+        "reasons": [
+          "block-unique:5"
+        ],
+        "blockSpan": 168,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes9.dex:Lcom/tencent/mm/ui/tools/ud;->a"
+        ],
+        "dexCallsites3220": [
+          "classes8.dex:Lcom/tencent/mm/ui/tools/ud;->a"
+        ]
+      },
+      {
+        "source": "drawable/b8i",
+        "baseline3200": "drawable/b8i",
+        "target": "drawable/b8i",
+        "baselineRid": "0x7f08177a",
+        "targetRid": "0x7f081743",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "xml-slots:47",
+          "block:5"
+        ],
+        "blockSpan": 168,
+        "xmlSlotVotes": {
+          "drawable/b8i": 47
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 70,
+        "xmlRefs3220Count": 68,
+        "arscRefs3200Count": 1,
+        "arscRefs3220Count": 1,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "drawable/b8j",
+        "baseline3200": "drawable/b8j",
+        "target": "drawable/b8j",
+        "baselineRid": "0x7f08177b",
+        "targetRid": "0x7f081744",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "block:5"
+        ],
+        "blockSpan": 168,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 2,
+        "arscRefs3220Count": 2,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "drawable/b8r",
+        "baseline3200": "drawable/b8r",
+        "target": "drawable/b8r",
+        "baselineRid": "0x7f08178a",
+        "targetRid": "0x7f081753",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "xml-slots:1",
+          "block:5"
+        ],
+        "blockSpan": 168,
+        "xmlSlotVotes": {
+          "drawable/b8r": 1
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "drawable/bm4",
+        "baseline3200": "drawable/bm4",
+        "target": "drawable/bm4",
+        "baselineRid": "0x7f081357",
+        "targetRid": "0x7f081340",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "block:3"
+        ],
+        "blockSpan": 79,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "drawable/cbs",
+        "baseline3200": "drawable/cbs",
+        "target": "drawable/cbs",
+        "baselineRid": "0x7f0811f7",
+        "targetRid": "0x7f0811e7",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "block:2"
+        ],
+        "blockSpan": 6,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes10.dex:Lcom/tencent/mm/plugin/appbrand/widget/music/MusicSeekBar;-><init>"
+        ],
+        "dexCallsites3220": [
+          "classes10.dex:Lcom/tencent/mm/plugin/appbrand/widget/music/MusicSeekBar;-><init>"
+        ]
+      },
+      {
+        "source": "drawable/d_u",
+        "baseline3200": "drawable/dct",
+        "target": "drawable/dd9",
+        "baselineRid": "0x7f081562",
+        "targetRid": "0x7f081522",
+        "candidateCount": 2,
+        "reasons": [
+          "block-unique:5"
+        ],
+        "blockSpan": 162,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes12.dex:Lxf4/e;->invokeSuspend",
+          "classes4.dex:Ldh4/h3;->D0",
+          "classes4.dex:Lrg4/u;->E"
+        ],
+        "dexCallsites3220": [
+          "classes6.dex:Lwf4/e;->invokeSuspend",
+          "classes6.dex:Lch4/h3;->D0",
+          "classes6.dex:Lqg4/u;->E"
+        ]
+      },
+      {
+        "source": "mipmap/b",
+        "baseline3200": "mipmap/b",
+        "target": "mipmap/b",
+        "baselineRid": "0x7f0d0003",
+        "targetRid": "0x7f0d0003",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "xml-slots:1"
+        ],
+        "blockSpan": 4,
+        "xmlSlotVotes": {
+          "mipmap/b": 1
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      }
+    ],
+    "MonetWeChatBadge": [
+      {
+        "source": "color/Red_100",
+        "baseline3200": "color/Red_100",
+        "target": "color/Red_100",
+        "baselineRid": "0x7f0601bc",
+        "targetRid": "0x7f0601bc",
+        "candidateCount": 5,
+        "reasons": [
+          "xml-slots-unique:16"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {
+          "color/Red_100": 16
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 34,
+        "xmlRefs3220Count": 38,
+        "arscRefs3200Count": 4,
+        "arscRefs3220Count": 4,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/ac",
+        "baseline3200": "color/ac",
+        "target": "color/ac",
+        "baselineRid": "0x7f0601bb",
+        "targetRid": "0x7f0601bb",
+        "candidateCount": 10,
+        "reasons": [
+          "xml-slots-unique:76"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {
+          "color/ac": 76
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 135,
+        "xmlRefs3220Count": 128,
+        "arscRefs3200Count": 4,
+        "arscRefs3220Count": 4,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      }
+    ],
+    "MonetWeChatChatBubble": [
+      {
+        "source": "color/Link_80",
+        "baseline3200": "color/Link_80",
+        "target": "color/Link_80",
+        "baselineRid": "0x7f06015e",
+        "targetRid": "0x7f06015e",
+        "candidateCount": 2,
+        "reasons": [
+          "xml-slots-unique:8"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {
+          "color/Link_80": 8
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 12,
+        "xmlRefs3220Count": 12,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/Link_80_CARE",
+        "baseline3200": "color/Link_80_CARE",
+        "target": "color/Link_80_CARE",
+        "baselineRid": "0x7f06015f",
+        "targetRid": "0x7f06015f",
+        "candidateCount": 2,
+        "reasons": [
+          "descriptive-name",
+          "block:5"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/Link_80_Night_Mode",
+        "baseline3200": "color/Link_80_Night_Mode",
+        "target": "color/Link_80_Night_Mode",
+        "baselineRid": "0x7f060160",
+        "targetRid": "0x7f060160",
+        "candidateCount": 3,
+        "reasons": [
+          "xml-slots-unique:1"
+        ],
+        "blockSpan": 435,
+        "xmlSlotVotes": {
+          "color/Link_80_Night_Mode": 1
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/hu",
+        "baseline3200": "color/hu",
+        "target": "color/hu",
+        "baselineRid": "0x7f060427",
+        "targetRid": "0x7f060425",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "block:5"
+        ],
+        "blockSpan": 455,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 1,
+        "arscRefs3220Count": 1,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "color/hx",
+        "baseline3200": "color/hx",
+        "target": "color/hx",
+        "baselineRid": "0x7f06042a",
+        "targetRid": "0x7f060428",
+        "candidateCount": 4,
+        "reasons": [
+          "block-unique:5"
+        ],
+        "blockSpan": 455,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes11.dex:Lcom/tencent/mm/pluginsdk/ui/span/z0;->setColorConfig"
+        ],
+        "dexCallsites3220": [
+          "classes6.dex:Lcom/tencent/mm/pluginsdk/ui/span/z0;->setColorConfig"
+        ]
+      },
+      {
+        "source": "color/i_",
+        "baseline3200": "color/i_",
+        "target": "color/i_",
+        "baselineRid": "0x7f060447",
+        "targetRid": "0x7f060445",
+        "candidateCount": 5,
+        "reasons": [
+          "xml-slots-unique:10"
+        ],
+        "blockSpan": 455,
+        "xmlSlotVotes": {
+          "color/i_": 10
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 12,
+        "xmlRefs3220Count": 12,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "drawable/bzp",
+        "baseline3200": "drawable/bzp",
+        "target": "drawable/bzp",
+        "baselineRid": "0x7f080464",
+        "targetRid": "0x7f080465",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "block:5"
+        ],
+        "blockSpan": 719,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "drawable/bzq",
+        "baseline3200": "drawable/bzq",
+        "target": "drawable/bzq",
+        "baselineRid": "0x7f080465",
+        "targetRid": "0x7f080466",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "block:5"
+        ],
+        "blockSpan": 719,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes14.dex:Lcom/tencent/mm/ui/chatting/viewitems/lb;->b",
+          "classes14.dex:Lcom/tencent/mm/ui/chatting/viewitems/yo;->b"
+        ],
+        "dexCallsites3220": [
+          "classes11.dex:Lcom/tencent/mm/ui/chatting/viewitems/lb;->b",
+          "classes11.dex:Lcom/tencent/mm/ui/chatting/viewitems/yo;->b"
+        ]
+      },
+      {
+        "source": "drawable/bzu",
+        "baseline3200": "drawable/bzu",
+        "target": "drawable/bzu",
+        "baselineRid": "0x7f080499",
+        "targetRid": "0x7f08049a",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "block:5"
+        ],
+        "blockSpan": 719,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "drawable/bzw",
+        "baseline3200": "drawable/bzw",
+        "target": "drawable/bzw",
+        "baselineRid": "0x7f08049b",
+        "targetRid": "0x7f08049c",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "block:5"
+        ],
+        "blockSpan": 719,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes14.dex:Lcom/tencent/mm/ui/chatting/viewitems/lb;->b",
+          "classes14.dex:Lcom/tencent/mm/ui/chatting/viewitems/yo;->b"
+        ],
+        "dexCallsites3220": [
+          "classes11.dex:Lcom/tencent/mm/ui/chatting/viewitems/lb;->b",
+          "classes11.dex:Lcom/tencent/mm/ui/chatting/viewitems/yo;->b"
+        ]
+      }
+    ],
+    "MonetWeChatMultiSceneCorners": [
+      {
+        "source": "drawable/aj9",
+        "baseline3200": "drawable/aj9",
+        "target": "drawable/aj9",
+        "baselineRid": "0x7f080f2d",
+        "targetRid": "0x7f080f36",
+        "candidateCount": 2,
+        "reasons": [
+          "block-unique:5"
+        ],
+        "blockSpan": 90,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 1,
+        "arscRefs3220Count": 1,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      },
+      {
+        "source": "drawable/bw7",
+        "baseline3200": "drawable/bw7",
+        "target": "drawable/bw7",
+        "baselineRid": "0x7f0801ab",
+        "targetRid": "0x7f0801b0",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "block:5"
+        ],
+        "blockSpan": 63,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes13.dex:Lcom/tencent/mm/plugin/pwdgroup/ui/widget/MMPwdInputView;-><init>",
+          "classes13.dex:Lcom/tencent/mm/plugin/pwdgroup/ui/widget/MMPwdInputView;->d"
+        ],
+        "dexCallsites3220": [
+          "classes15.dex:Lcom/tencent/mm/plugin/pwdgroup/ui/widget/MMPwdInputView;-><init>",
+          "classes15.dex:Lcom/tencent/mm/plugin/pwdgroup/ui/widget/MMPwdInputView;->d"
+        ]
+      }
+    ],
+    "MonetWeChatSolidTab": [
+      {
+        "source": "color/bb",
+        "baseline3200": "color/bb",
+        "target": "color/bb",
+        "baselineRid": "0x7f0602af",
+        "targetRid": "0x7f0602b0",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "block:5"
+        ],
+        "blockSpan": 78,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes16.dex:Landroidx/appcompat/widget/h0;->k"
+        ],
+        "dexCallsites3220": [
+          "classes14.dex:Landroidx/appcompat/widget/h0;->k"
+        ]
+      }
+    ],
+    "MonetWeChatBlurTab": [
+      {
+        "source": "color/bb",
+        "baseline3200": "color/bb",
+        "target": "color/bb",
+        "baselineRid": "0x7f0602af",
+        "targetRid": "0x7f0602b0",
+        "candidateCount": 1,
+        "reasons": [
+          "unique-value",
+          "block:5"
+        ],
+        "blockSpan": 78,
+        "xmlSlotVotes": {},
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 0,
+        "xmlRefs3220Count": 0,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [
+          "classes16.dex:Landroidx/appcompat/widget/h0;->k"
+        ],
+        "dexCallsites3220": [
+          "classes14.dex:Landroidx/appcompat/widget/h0;->k"
+        ]
+      },
+      {
+        "source": "color/df",
+        "baseline3200": "color/df",
+        "target": "color/df",
+        "baselineRid": "0x7f060326",
+        "targetRid": "0x7f060324",
+        "candidateCount": 12,
+        "reasons": [
+          "xml-slots-unique:1"
+        ],
+        "blockSpan": 455,
+        "xmlSlotVotes": {
+          "color/df": 1
+        },
+        "styleSlotVotes": {},
+        "xmlRefs3200Count": 1,
+        "xmlRefs3220Count": 1,
+        "arscRefs3200Count": 0,
+        "arscRefs3220Count": 0,
+        "dexCallsites3200": [],
+        "dexCallsites3220": []
+      }
+    ]
+  }
+}

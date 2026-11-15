@@ -12,6 +12,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 import shutil
 import struct
 import subprocess
@@ -91,6 +92,74 @@ def private_name(name: str) -> str:
     return f"{kind}/compat_private_{hashlib.sha256(name.encode()).hexdigest()[:16]}"
 
 
+def find_sdk_tool(explicit: str | None, tool_name: str) -> Path | None:
+    if explicit:
+        candidate = path(explicit)
+        return candidate if candidate.is_file() else None
+    found = shutil.which(tool_name)
+    if found:
+        return Path(found)
+    sdk_root = os.environ.get("ANDROID_HOME") or os.environ.get("ANDROID_SDK_ROOT")
+    if not sdk_root and sys.platform == "win32":
+        local_app = os.environ.get("LOCALAPPDATA")
+        if local_app:
+            sdk_root = str(Path(local_app) / "Android" / "Sdk")
+    if sdk_root:
+        build_tools = Path(sdk_root) / "build-tools"
+        if build_tools.is_dir():
+            for ver_dir in sorted(build_tools.iterdir(), reverse=True):
+                for ext in ((".bat", ".exe", "") if sys.platform == "win32" else ("",)):
+                    candidate = ver_dir / f"{tool_name}{ext}"
+                    if candidate.is_file():
+                        return candidate
+    return None
+
+
+def sign_with_sdk(
+    apks: list[Path],
+    zipalign_bin: Path,
+    apksigner_bin: Path,
+    keystore: Path,
+    ks_pass: str,
+    ks_alias: str,
+    key_pass: str,
+) -> None:
+    for apk in apks:
+        aligned = apk.with_suffix(".aligned.apk")
+        signed = apk.with_suffix(".signed.apk")
+        subprocess.run(
+            [str(zipalign_bin), "-f", "-p", "4", str(apk), str(aligned)],
+            check=True,
+        )
+        subprocess.run(
+            [
+                str(apksigner_bin),
+                "sign",
+                "--ks",
+                str(keystore),
+                "--ks-pass",
+                ks_pass,
+                "--ks-key-alias",
+                ks_alias,
+                "--key-pass",
+                key_pass,
+                "--v1-signing-enabled",
+                "true",
+                "--v2-signing-enabled",
+                "true",
+                "--v3-signing-enabled",
+                "true",
+                "--out",
+                str(signed),
+                str(aligned),
+            ],
+            check=True,
+        )
+        subprocess.run([str(apksigner_bin), "verify", str(signed)], check=True)
+        aligned.unlink(missing_ok=True)
+        signed.replace(apk)
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--wx-apk", required=True, help="与映射中版本号、SHA256 一致的微信基础 APK")
@@ -110,8 +179,14 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--signer",
         default=str(ROOT.parent / "tools" / "uber-apk-signer.jar"),
-        help="uber-apk-signer.jar；--apply 要求签名器存在",
+        help="uber-apk-signer.jar；未提供 --keystore 时要求签名器存在",
     )
+    parser.add_argument("--keystore", help="Android JKS/PKCS12 签名密钥库（配合 apksigner + zipalign）")
+    parser.add_argument("--ks-pass", default="pass:android", help="apksigner --ks-pass 参数")
+    parser.add_argument("--ks-key-alias", default="androiddebugkey", help="密钥别名")
+    parser.add_argument("--key-pass", default="pass:android", help="apksigner --key-pass 参数")
+    parser.add_argument("--zipalign", help="zipalign 可执行文件路径")
+    parser.add_argument("--apksigner", help="apksigner 可执行文件路径")
     parser.add_argument(
         "--apply",
         action="store_true",
@@ -147,7 +222,16 @@ def main() -> int:
         raise SystemExit('目标 APK 与已审核的资源映射不一致')
     if spec.get('schemaVersion') != 2:
         raise SystemExit('需要完整审核的 schemaVersion=2 映射，拒绝沿用未分类的同名资源')
-    if args.apply and not signer.is_file():
+    keystore = path(args.keystore) if args.keystore else None
+    zipalign_bin = find_sdk_tool(args.zipalign, "zipalign")
+    apksigner_bin = find_sdk_tool(args.apksigner, "apksigner")
+    use_sdk_signer = keystore is not None
+    if use_sdk_signer:
+        if not keystore.is_file():
+            raise SystemExit(f"密钥库不存在: {keystore}")
+        if not zipalign_bin or not apksigner_bin:
+            raise SystemExit("使用 --keystore 签名需要 zipalign 与 apksigner")
+    elif args.apply and not signer.is_file():
         raise SystemExit(f'签名器不存在，不能应用未签名 APK: {signer}')
 
     # Include split resources when they sit next to the base APK.  The base
@@ -204,7 +288,18 @@ def main() -> int:
             raise SystemExit(f'{overlay} 输出资源表不符合完整映射')
         print(f"built {destination.name}: {len(rename) - len(private)} targets, {len(private)} private entries")
 
-    if signer.is_file():
+    if use_sdk_signer:
+        sign_with_sdk(
+            built,
+            zipalign_bin,
+            apksigner_bin,
+            keystore,
+            args.ks_pass,
+            args.ks_key_alias,
+            args.key_pass,
+        )
+        print(f"aligned and signed {len(built)} APKs with apksigner")
+    elif signer.is_file():
         for apk in built:
             subprocess.run(
                 ["java", "-jar", str(signer), "-a", str(apk), "--overwrite"],

@@ -22,7 +22,7 @@ is_play_wechat_version() {
 
 is_mainland_wechat_version() {
   case "$1" in
-    3140|3141|3160|3200) return 0 ;;
+    3140|3141|3160|3200|3220) return 0 ;;
     *) [ -n "$AUTOMATION_WECHAT_VERSION_CODE" ] && [ "$1" = "$AUTOMATION_WECHAT_VERSION_CODE" ] ;;
   esac
 }
@@ -151,7 +151,7 @@ overlay_source_apk() {
   if [ -n "$version" ]; then
     candidate="$moddir/files/${name}-${version}.apk"
     [ -f "$candidate" ] && { echo "$candidate"; return 0; }
-    if [ "$version" = "3182" ] || [ "$version" = "3200" ] || [ "$version" = "$AUTOMATION_WECHAT_VERSION_CODE" ]; then
+    if [ "$version" = "3182" ] || [ "$version" = "3200" ] || [ "$version" = "3220" ] || [ "$version" = "$AUTOMATION_WECHAT_VERSION_CODE" ]; then
       case "$name" in
         MonetWeChat|MonetWeChatBadge|MonetWeChatChatBubble|MonetWeChatMultiSceneCorners|MonetWeChatSolidTab|MonetWeChatBlurTab)
           echo "! 缺少 ${name}-${version}.apk，不能使用旧版混淆资源。" >&2

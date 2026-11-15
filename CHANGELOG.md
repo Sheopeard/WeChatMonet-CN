@@ -2,6 +2,17 @@
 
 所有显著变更记录于此。格式参考 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.1.0/)。
 
+## [26S4-CN14-A2] - 2026-11-15
+
+### 新增
+- 完成微信国内正式版 **8.0.80**（`versionCode=3220`，ARM64，`Android_Wechat_RELEASE_WUKONG #8724`）六个覆盖包的完整语义适配，新增 `compat/3220.json`、`compat/3220-audit.json`、`compat/3220-validation.md` 与 `files/*-3220.apk`。
+- `MonetWeChat` 映射 227 项、`MonetWeChatBadge` 2 项、`MonetWeChatChatBubble` 10 项、`MonetWeChatMultiSceneCorners` 2 项、`MonetWeChatSolidTab` 1 项、`MonetWeChatBlurTab` 2 项；确认 `drawable/cbr` 随 8.0.80 移除 `MvTracksEditView` 相关布局消失并转入私有隔离。
+- 安装器、action、service、boot-completed 与版本选择测试接入精确 `3220` 门禁，拒绝未适配版本回退。
+
+### 修复与工具链
+- 核对上游 `ee89e46` 重打包后的 6 个源 APK 内容未变，更新 `compat/3182.json` 与 `compat/3200.json` 中失效的 `sourceSha256`。
+- `adapt_wechat.py` 新增 Android SDK `zipalign` + `apksigner`（`--keystore`）签名与校验支持；六个 `*-3220.apk` 使用独立开发证书签发 v3 签名（详见 `compat/3220-validation.md`）。
+
 ## [26S4-CN14-A1] - 2026-11-11
 
 - 恢复精确微信版本门禁，撤销未知版本试用 CN 3200 资源的处理。

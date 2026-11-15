@@ -37,7 +37,7 @@ check_wechat_version() {
   elif is_mainland_wechat_version "$version_code"; then
     echo "- 已确认微信版本：大陆版 (${version_code})"
   else
-    abort "! 仅支持微信大陆版 (3140/3141/3160/3200) / Play 版 (3084/3085/3182)，检测到 versionCode=${version_code:-未知}。"
+    abort "! 仅支持微信大陆版 (3140/3141/3160/3200/3220) / Play 版 (3084/3085/3182)，检测到 versionCode=${version_code:-未知}。"
   fi
 }
 

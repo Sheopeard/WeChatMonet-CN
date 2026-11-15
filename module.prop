@@ -1,7 +1,7 @@
 id=WeChat_Monet_Pro
 name=WeChat Monet Pro CN
-version=26S4-CN14-A1
-versionCode=261111
+version=26S4-CN14-A2
+versionCode=261115
 author=枯れ木, 1e93d, HSSkyBoy
-description=微信莫奈国内版：仅允许已核对资源的精确版本。新版通过云端映射、独立验证及 NAS 签名后发布测试版；上游已适配最新版国内微信时优先使用上游版。
+description=微信莫奈国内版：支持已核对国内版 8.0.76–8.0.80（3140–3220）及 Play 版（3084/3085/3182），拒绝未适配版本回退。
 updateJson=https://raw.githubusercontent.com/Sheopeard/WeChatMonet-CN/main/update.json

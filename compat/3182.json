@@ -7,12 +7,12 @@
   "baselineVersionCode": 3160,
   "targetSha256": "4382254fbb256f37b7b430e6f3d984c512c603e46d39f9c323cd8a6fa75d8364",
   "sourceSha256": {
-    "MonetWeChat": "596cabd7d9ff6a1ffb39d937674c2977fd6dc103729707675cd329633f0867e8",
-    "MonetWeChatBadge": "ed78e44872c83b4baf11b793b6449184927f59edd703fa6f1e72ebeff80c3309",
-    "MonetWeChatChatBubble": "399f6c5e51c2e62cc12fd2da3402ff874bca6faa6022ce94b17d4132a99e6174",
-    "MonetWeChatMultiSceneCorners": "b7e3c6ed6481ecda3e52acd2b5551953956757e5f327e7148fb5835a4af73e80",
-    "MonetWeChatSolidTab": "35cdba0e8405e69ca8b4e0761a0c486bc23c2b4f5703af6be2710a64f3d82110",
-    "MonetWeChatBlurTab": "87785b11656b020a9e182f5aa71c20329d8fc246ebb5a9bbcf9a6adaa964dc0e"
+    "MonetWeChat": "3669adec5e686d36fb278cf5a9bab87def9fe5b573ce6c80cc4b04c01f594742",
+    "MonetWeChatBadge": "b4d0262bd64257d0c4060bdfd48a701617c78d3b627b0f2db7177b51b61e0f2f",
+    "MonetWeChatChatBubble": "448ba767fdb7d10483737ba438d0a93868f913dd315017fe89c1133d56e68ca6",
+    "MonetWeChatMultiSceneCorners": "20921ca0ba58bcf1865e45a38b171283e22e84d6c91fe4107414f7ed3edaa6f7",
+    "MonetWeChatSolidTab": "0c26263334c61260e6b9189738faa93b26507acdd387d0402a8075ab0518252b",
+    "MonetWeChatBlurTab": "9ade188900e1c7716f9fc500c0a8c526a783f0b25127e99c0be141cc87a95b39"
   },
   "overlays": {
     "MonetWeChat": {
